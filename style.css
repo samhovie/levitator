@@ -11,13 +11,16 @@ html {
     height: 100%;
     overflow: hidden;
   }
+  div {
+      border: 1px solid red;
+  }
   .buttons {
     position: absolute;
     top: 10px;
     left: 10px;
     right: 10px;
     bottom: 10px;
-    z-index: 265;
+    z-index: 1;
   }
   .buttons button {
     border: none;
@@ -34,17 +37,39 @@ html {
     top: 0%;
     left: 50%;
   }
+  #bottom-hide {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    background: none;
+  }
   .buttons #bottom {
     position: absolute;
     bottom: 0;
     left: 50%;
+  }
+  .buttons #top-hide {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    background: none;
   }
   .buttons #left {
     position: absolute;
     top: 50%;
     left: 0px;
   }
+  .buttons #right-hide {
+    position: absolute;
+    top: 50%;
+    left: 0px;
+  }
   .buttons #right {
+    position: absolute;
+    top: 50%;
+    right: 0;
+  }
+  .buttons #left-hide {
     position: absolute;
     top: 50%;
     right: 0;
@@ -57,11 +82,12 @@ html {
     left: 0;
     bottom: auto;
     right: auto;
-    background: #6c567b;
+    background: #000000;
     transition: all 0.9s cubic-bezier(0.6, 0.05, 0.4, 1);
+    z-index: 2;
   }
   .top-layer.active {
-    top: 100%;
+    top: 0%;
   }
   .bottom-layer {
     position: absolute;
@@ -71,11 +97,13 @@ html {
     left: 0;
     bottom: auto;
     right: auto;
-    background: #48466d;
+    /* background: #48466d; */
+    background: #000000;
     transition: all 0.7s cubic-bezier(0.645, 0.045, 0.355, 1);
+    z-index: 2;
   }
   .bottom-layer.active {
-    top: -100%;
+    top: 0%;
   }
   .left-layer {
     position: absolute;
@@ -85,11 +113,12 @@ html {
     left: -100%;
     bottom: auto;
     right: auto;
-    background: #4d606e;
+    background: #000000;
     transition: all 0.7s cubic-bezier(0.645, 0.045, 0.355, 1);
+    z-index: 2;
   }
   .left-layer.active {
-    left: 100%;
+    left: 0%;
   }
   .right-layer {
     position: absolute;
@@ -99,9 +128,10 @@ html {
     left: 100%;
     bottom: auto;
     right: auto;
-    background: #7f4a88;
+    background: #000000;
     transition: all 0.9s cubic-bezier(0.645, 0.045, 0.355, 1);
+    z-index: 2;
   }
   .right-layer.active {
-    left: -100%;
+    left: 0%;
   }
