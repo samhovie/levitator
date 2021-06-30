@@ -14,35 +14,38 @@ html {
   /* div {
       border: 1px solid red;
   } */
-  .buttons {
-    position: absolute;
+  /* .buttons { */
+    /* position: absolute;
     top: 10px;
     left: 10px;
     right: 10px;
-    bottom: 10px;
+    bottom: 10px; */
     /* z-index: -1; */
-  }
-  .buttons button {
+  /* } */
+  /* .buttons button {
     border: none;
-    /* background: rgba(0,0,0,0.02); */
     background: none;
     border-radius: 5px;
     cursor: pointer;
-    /* z-index: 1; */
+  } */
+  button {
+    border: none;
+    background: none;
+    border-radius: 5px;
+    cursor: pointer;
   }
   /* .buttons button:hover {
     background: rgba(0,0,0,0.04);
   } */
-  .buttons #top {
+  /* .buttons #top {
     position: absolute;
     top: 0%;
     left: 50%;
-  }
+  } */
   #top { 
     position: absolute;
     top: 0%;
     left: 50%;
-    /* z-index: 2; */
   } 
   #bottom-hide {
     position: absolute;
@@ -50,33 +53,33 @@ html {
     left: 50%;
     background: none;
   }
-  .buttons #bottom {
+  #bottom {
     position: absolute;
     bottom: 0;
     left: 50%;
   }
-  .buttons #top-hide {
+  #top-hide {
     position: absolute;
-    /* bottom: 0;
+    bottom: 0%;
     left: 50%;
-    background: none; */
+    /* background: none; */
   }
-  .buttons #left {
+  #left {
     position: absolute;
     top: 50%;
     left: 0px;
   }
-  .buttons #right-hide {
+  #right-hide {
     position: absolute;
     top: 50%;
     left: 0px;
   }
-  .buttons #right {
+  #right {
     position: absolute;
     top: 50%;
     right: 0;
   }
-  .buttons #left-hide {
+  #left-hide {
     position: absolute;
     top: 50%;
     right: 0;
