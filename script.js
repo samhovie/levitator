@@ -1,18 +1,49 @@
-// const buttons = document.getElementsByTagName("button");
+const buttons = document.getElementsByTagName("button");
 
-// for (const button of buttons) {
-//   button.addEventListener('click', () => {
-//      var id = button.getAttribute("id");
+for (const button of buttons) {
+  button.addEventListener('click', () => {
+     var id = button.getAttribute("id");
     
-//      var layerClass = "." + id+ "-layer";
-//      var layers = document.querySelectorAll(layerClass);
-//      for (const layer of layers) {
-//         //  adding class if not there, taking away if it is 
-//        layer.classList.toggle("active");
-//      }
-//   });
-// }
+     var layerClass = "." + id+ "-layer";
+     var layers = document.querySelectorAll(layerClass);
+     for (const layer of layers) {
+        //  adding class if not there, taking away if it is 
+       layer.classList.toggle("active");
+     }
+  });
+}
 
+
+// let scene, camera, renderer;
+// function init () {
+//     scene = new THREE.Scene();
+//     scene.background = new THREE.Color(0xdddddd);
+//     camera = new THREE.PerspectiveCamera(40,window.innerWidth/window.innerHeight,1,5000);
+
+//     camera = new THREE.PerspectiveCamera(40,window.innerWidth/window.innerHeight,1,5000);
+//     camera.rotation.y = 45/180*Math.PI;
+//     camera.position.x = 800;
+//     camera.position.y = 100;
+//     camera.position.z = 1000;
+
+//     hlight = new THREE.AmbientLight (0x404040,100);
+//     scene.add(hlight);
+//     renderer = new THREE.WebGLRenderer({antial:true});
+
+//     renderer.setSize(window.innerWidth,window.innerHeight);
+//     document.body.appendChild(renderer.domElement);
+
+//     let loader = new THREE.GLTFLoader();
+
+//     loader.load('scene.gltf', function(gltf) {
+//         car = gltf.scene.children[0];
+//         car.scale.set(0.5,0.5,0.5);
+//         scene.add(gltf.scene);
+//         renderer.render(scene,camera);
+//     });
+// }
+// // init();
+// import {OrbitControls} from 'https://threejsfundamentals.org/threejs/resources/threejs/r122/examples/jsm/controls/OrbitControls.js';
 
 let scene, camera, renderer;
 
@@ -54,13 +85,13 @@ function init() {
     light4.position.set(-500,300,500);
     scene.add(light4);
 
-    let container = document.getElementById( 'canvas' );
+    // let container = document.getElementById( 'canvas' );
 // document.body.appendChild( container );
 
     renderer = new THREE.WebGLRenderer({antialias:true});
     renderer.setSize(window.innerWidth,window.innerHeight);
-    // document.body.appendChild(renderer.domElement);
-    document.body.appendChild( container );
+    document.body.appendChild(renderer.domElement);
+    // document.body.appendChild( container );
 
     let controls = new THREE.OrbitControls(camera, renderer.domElement);
     controls.addEventListener('change', renderer);
