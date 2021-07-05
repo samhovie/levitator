@@ -11,37 +11,39 @@ html {
     height: 100%;
     overflow: hidden;
   }
-  /* div {
-      border: 1px solid red;
-  } */
-  /* .buttons { */
-    /* position: absolute;
-    top: 10px;
-    left: 10px;
-    right: 10px;
-    bottom: 10px; */
-    /* z-index: -1; */
-  /* } */
-  /* .buttons button {
-    border: none;
-    background: none;
-    border-radius: 5px;
-    cursor: pointer;
-  } */
+  html, body {
+    height: 100%;
+    width: 100%;
+  }
+  #car-scene {
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     top: 0%;
+     left: 0;
+     bottom: auto;
+     right: auto;
+     background: grey;
+    transition: all 0.9s cubic-bezier(0.6, 0.05, 0.4, 1);
+    }
+  #car-scene.top {
+      top: 100%;
+  }
+ #car-scene.bottom {
+    top: -100%;
+  }
+  #car-scene.right {
+    left: -100%;
+  } 
+  #car-scene.left {
+    left: 100%;
+  }
   button {
     border: none;
     background: none;
     border-radius: 5px;
     cursor: pointer;
   }
-  /* .buttons button:hover {
-    background: rgba(0,0,0,0.04);
-  } */
-  /* .buttons #top {
-    position: absolute;
-    top: 0%;
-    left: 50%;
-  } */
   #top { 
     position: absolute;
     top: 0%;
@@ -62,7 +64,6 @@ html {
     position: absolute;
     bottom: 0%;
     left: 50%;
-    /* background: none; */
   }
   #left {
     position: absolute;
@@ -94,11 +95,9 @@ html {
     right: auto;
     background: #000000;
     transition: all 0.9s cubic-bezier(0.6, 0.05, 0.4, 1);
-    /* z-index: 2; */
   }
   .top-layer.active {
     top: 0%;
-    /* z-index: 2; */
   }
   .bottom-layer {
     position: absolute;
@@ -108,10 +107,8 @@ html {
     left: 0;
     bottom: auto;
     right: auto;
-    /* background: #48466d; */
     background: #000000;
-    transition: all 0.7s cubic-bezier(0.645, 0.045, 0.355, 1);
-    /* z-index: 2; */
+    transition: all 0.9s cubic-bezier(0.6, 0.05, 0.4, 1);
   }
   .bottom-layer.active {
     top: 0%;
@@ -125,8 +122,7 @@ html {
     bottom: auto;
     right: auto;
     background: #000000;
-    transition: all 0.7s cubic-bezier(0.645, 0.045, 0.355, 1);
-    /* z-index: 2; */
+    transition: all 0.9s cubic-bezier(0.6, 0.05, 0.4, 1);
   }
   .left-layer.active {
     left: 0%;
@@ -140,8 +136,7 @@ html {
     bottom: auto;
     right: auto;
     background: #000000;
-    transition: all 0.9s cubic-bezier(0.645, 0.045, 0.355, 1);
-    /* z-index: 2; */
+    transition: all 0.9s cubic-bezier(0.6, 0.05, 0.4, 1);
   }
   .right-layer.active {
     left: 0%;
