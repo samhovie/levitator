@@ -16,14 +16,14 @@ html {
     width: 100%;
   }
   #car-scene {
-     position: absolute;
+     position: fixed;
      width: 100%;
      height: 100%;
      top: 0%;
      left: 0;
      bottom: auto;
      right: auto;
-     background: grey;
+     background: none;
     transition: all 0.9s cubic-bezier(0.6, 0.05, 0.4, 1);
     }
   #car-scene.top {
