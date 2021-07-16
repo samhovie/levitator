@@ -17,23 +17,34 @@ html {
 .o0 {
     opacity: 0 !important;
 }
-#title {
-    background: #dddddd; 
-    /* padding: 0; 
-    margin: 0;  */
+/* 
+#home-header {
     z-index: 3;
-    /* border: none; */
-    position: absolute;
-}
-#shows-title {
-    position: absolute;
-    background: none;
-    top: 10%;
+    position: relative;
+    height: 100%;
+    width: 100%;
+
+    top: 50%;
     left: 50%;
-    margin-left: -220px;
-    font-size: 100px;
+
 }
-#email {
+#home-title {
+    z-index: 3;
+    font-size: 120px;
+    position: relative;
+    top: 20%;
+    left: 50%;
+    margin-left: -290px;
+
+
+
+} */
+#home-break {
+    display: none;
+}
+
+
+/* #email {
 
     position: absolute;
     background: none;
@@ -50,7 +61,7 @@ html {
     left: 50%;
     margin-left: -110px;
     font-size: 100px;
-}
+} */
 button {
     border: none;
     background: none;
@@ -113,6 +124,38 @@ button {
 .page-1 {
     background-color: #dddddd;
 }
+
+#show-header {
+    position: relative;
+    height: 15vh;
+    border: 1px solid red;
+    /* justify-content: center; */
+
+}
+#show-title {
+    font-size: 64px;
+}
+
+#show-body {
+    position: relative;
+    
+    /* height: 85%; */
+    height: calc(100vh - 15vh);
+    width: 80%;
+    margin: 10%;
+    border: 1px solid red;
+    overflow-y: scroll !important;
+    z-index: 3;
+
+}
+/* .content {
+    position: relative;
+    width:100%; 
+    overflow-y:scroll; 
+     height: calc(100vh - 15vh);
+
+} */
+
 
 /* .page-2 {
     background-color: yellow;
