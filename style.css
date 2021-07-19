@@ -1,41 +1,24 @@
 html {
     box-sizing: border-box;
   }
+  
   *,
   *:before,
   *:after {
     box-sizing: inherit;
     padding: 0;
   }
+
   body {
     height: 100%;
     margin: 0;
     overflow: hidden;
   }
 
-
 .o0 {
     opacity: 0 !important;
 }
 
-/* #home-header {
-    z-index: 3;
-    position: relative;
-    height: 100%;
-    width: 100%;
-
-    top: 50%;
-    left: 50%;
-
-} */
-/* #home-header {
-    z-index: 3;
-    background: none;
-    border: 1px solid red;
-    width: 80%;
-    height: 20%;
-    margin: 10%
-} */
 
 #home-title {
     z-index: 3;
@@ -43,48 +26,24 @@ html {
     position: absolute;
     background: none;
     width: 532px;
-    
-    /* height: 160px; */
-    top: 20%;
+    top: 15%;
     left: 50%;
-    margin-left: -266;
+    margin-left: -266px;
 }
 
 #home-break {
     display: none;
 }
 
-
-/* #email {
-
-    position: absolute;
-    background: none;
-    top: 30%;
-    left: 50%;
-    margin-left: -290px;
-    font-size: 50px;
-
-}
-#book-title {
-    position: absolute;
-    background: none;
-    top: 10%;
-    left: 50%;
-    margin-left: -110px;
-    font-size: 100px;
-} */
 button {
     border: none;
     background: none;
-    /* border-radius: 5px; */
     cursor: pointer;
     position: absolute;
     z-index: 3;
     font-size: 40px;
-    /* padding-top: 20px;
-    padding-bottom;: 20px */
-
   }
+
 #top-button { 
     position: absolute;
     top: 0%;
@@ -92,17 +51,16 @@ button {
     left: 50%;
     transform: rotate(180deg);
     padding-bottom: 30px;
-
-    
   } 
+
   #bottom-button {
     position: absolute;
     bottom: 0px;
     margin-left: -58px;
     left: 50%;
-    /* transform: rotate(180deg); */
     padding-bottom: 30px;
   }
+
   #left-button {
     position: absolute;
     top: 50%;
@@ -111,6 +69,7 @@ button {
     margin-top: -75px;
     transform: rotate(90deg);
   }
+
   #right-button {
     position: absolute;
     top: 50%;
@@ -154,9 +113,6 @@ button {
 #show-header {
     position: relative;
     height: 15vh;
-    border: 1px solid red;
-    /* justify-content: center; */
-
 }
 #show-title {
     font-size: 64px;
@@ -164,170 +120,10 @@ button {
 
 #show-body {
     position: relative;
-    
-    /* height: 85%; */
     height: calc(90vh - 15vh);
     width: 80%;
     margin: 10%;
-    border: 1px solid red;
     overflow-y: scroll !important;
     z-index: 3;
 
 }
-
-
-/* .content {
-    position: relative;
-    width:100%; 
-    overflow-y:scroll; 
-     height: calc(100vh - 15vh);
-
-} */
-
-
-/* .page-2 {
-    background-color: yellow;
-} */
-/* html {
-    box-sizing: border-box;
-  }
-  *,
-  *:before,
-  *:after {
-    box-sizing: inherit;
-    padding: 0;
-  }
-  body {
-    height: 100%;
-    overflow: hidden;
-  }
-
-  button {
-    border: none;
-    background: none;
-    border-radius: 5px;
-    cursor: pointer;
-    position: absolute;
-  }
-  #car-scene {
-     position: fixed;
-     width: 100%;
-     height: 100%;
-     top: 0%;
-     left: 0;
-     bottom: auto;
-     right: auto;
-     background: none;
-    transition: all 0.9s cubic-bezier(0.6, 0.05, 0.4, 1);
-    }
-  #car-scene.top {
-      top: 100%;
-  }
- #car-scene.bottom {
-    top: -100%;
-  }
-  #car-scene.right {
-    left: -100%;
-  } 
-  #car-scene.left {
-    left: 100%;
-  }
-
-  #top { 
-    position: absolute;
-    top: 0%;
-    left: 50%;
-  } 
-  #bottom {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-  }
-  #left {
-    position: absolute;
-    top: 50%;
-    left: 0px;
-  }
-  #right {
-    position: absolute;
-    top: 50%;
-    right: 0;
-  }
-
-  #bottom-hide {
-    position: absolute;
-    top: 0%;
-    left: 50%;
-  }
-  #top-hide {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-  }
-  #right-hide {
-    position: absolute;
-    top: 50%;
-    left: 0px;
-  }
-  #left-hide {
-    top: 50%;
-    right: 0;
-  }
-
-
-  .top-layer {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: -100%;
-    left: 0;
-    bottom: auto;
-    right: auto;
-    background: #000000;
-    transition: all 0.9s cubic-bezier(0.6, 0.05, 0.4, 1);
-  }
-  .top-layer.active {
-    top: 0%;
-  }
-  .bottom-layer {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 100%;
-    left: 0;
-    bottom: auto;
-    right: auto;
-    background: #000000;
-    transition: all 0.9s cubic-bezier(0.6, 0.05, 0.4, 1);
-  }
-  .bottom-layer.active {
-    top: 0%;
-  }
-  .left-layer {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: auto;
-    left: -100%;
-    bottom: auto;
-    right: auto;
-    background: #000000;
-    transition: all 0.9s cubic-bezier(0.6, 0.05, 0.4, 1);
-  }
-  .left-layer.active {
-    left: 0%;
-  }
-  .right-layer {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: auto;
-    left: 100%;
-    bottom: auto;
-    right: auto;
-    background: #000000;
-    transition: all 0.9s cubic-bezier(0.6, 0.05, 0.4, 1);
-  }
-  .right-layer.active {
-    left: 0%;
-  } */
