@@ -5,42 +5,48 @@ layout: none
 <head>
     <meta charset="UTF-8">
     <title>Cowboy Killers</title>
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"> -->
     
     <link rel="stylesheet" href="./style.css">
-  
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r126/three.min.js" integrity="sha512-n8IpKWzDnBOcBhRlHirMZOUvEq2bLRMuJGjuVqbzUJwtTsgwOgK5aS0c1JA647XWYfqvXve8k3PtZdzpipFjgg==" crossorigin="anonymous"></script>
-  <script src="https://unpkg.com/three@0.126.0/examples/js/loaders/GLTFLoader.js"></script>
-  
-  <script type="module" src="OrbitControls.js"></script>
-
-  <!-- <link rel="stylesheet" href="./style.css"> -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r126/three.min.js" integrity="sha512-n8IpKWzDnBOcBhRlHirMZOUvEq2bLRMuJGjuVqbzUJwtTsgwOgK5aS0c1JA647XWYfqvXve8k3PtZdzpipFjgg==" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/three@0.126.0/examples/js/loaders/GLTFLoader.js"></script>
+    <script type="module" src="OrbitControls.js"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
   
   </head>
+  
+  <div class="container">
+      <!-- <button id="top-button"><img src="https://icongr.am/feather/chevron-up.svg?size=120"/></button> -->
+      <button id="top-button">MERCH</button>
+      
+      <!-- <button id="left-button"><img src="https://icongr.am/feather/chevron-left.svg?size=120"/></button> -->
+      <button id="left-button">SHOWS</button>
+      
+      <!-- <button id="bottom-button"><img src="https://icongr.am/feather/chevron-down.svg?size=120"/></button> -->
+      <button id="bottom-button">BOOK</button>
+      
+      <!-- <button id="right-button"><img src="https://icongr.am/feather/chevron-right.svg?size=120"/></button> -->
 
-<div class="container">
-    <!-- <button id="top-button"><img src="https://icongr.am/feather/chevron-up.svg?size=120"/></button> -->
-<button id="left-button"><img src="https://icongr.am/feather/chevron-left.svg?size=120"/></button>
-<!-- <button id="right-button"><img src="https://icongr.am/feather/chevron-right.svg?size=120"/></button> -->
-<button id="bottom-button"><img src="https://icongr.am/feather/chevron-down.svg?size=120"/></button>
-    <div id = "home" class=" page-0"></div>
-    <!-- <h1 id='title'>Cowboy Killers</h1> -->
-    <div id = "left" class=" page-1 o0">
-        <!-- <h1 id='shows-title'>Live Shows</h1> -->
-        <div id="show-header">
-            <h2 id = 'show-title'>Live Shows</h2>
-        </div>
-        <div id ='show-body' style="font-size: 80px;">
-            <!-- <div class="content" style="font-size: 80px;"> -->
+      <button id="right-button">PRESS</button>
 
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Vivamus porta tortor sed metus. Nam pretium. Sed tempor. Integer ullamcorper, odio quis porttitor sagittis, nisl erat tincidunt massa, eu eleifend eros nibh sollicitudin est. Nulla dignissim. Mauris sollicitudin, arcu id sagittis placerat, tellus mauris egestas felis, eget interdum mi nibh vel lorem. Aliquam egestas hendrerit massa. Suspendisse sed nunc et lacus feugiat hendrerit. Nam cursus euismod augue. Aenean vehicula nisl eu quam luctus adipiscing. Nunc consequat justo pretium orci. Mauris hendrerit fermentum massa. Aenean consectetuer est ut arcu. Aliquam nisl massa, blandit at, accumsan sed, porta vel, metus. Duis fringilla quam ut eros.</p>
-        
-              <!-- </div> -->
+      <div id = "home" class=" page-0">
+          <!-- <div id = 'home-header'> -->
+            <h1 id='home-title'>Cowboy <br id='home-break'>Killers</h1>
+          <!-- </div> -->
+      </div>
 
+      <div id = "left" class=" page-1 o0">
+          <div id="show-header">
+              <h2 id = 'show-title'>Live Shows</h2>
+          </div>
+
+          <div id ='show-body' style="font-size: 80px;">
+
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Vivamus porta tortor sed metus. Nam pretium. Sed tempor. Integer ullamcorper, odio quis porttitor sagittis, nisl erat tincidunt massa, eu eleifend eros nibh sollicitudin est. Nulla dignissim. Mauris sollicitudin, arcu id sagittis placerat, tellus mauris egestas felis, eget interdum mi nibh vel lorem. Aliquam egestas hendrerit massa. Suspendisse sed nunc et lacus feugiat hendrerit. Nam cursus euismod augue. Aenean vehicula nisl eu quam luctus adipiscing. Nunc consequat justo pretium orci. Mauris hendrerit fermentum massa. Aenean consectetuer est ut arcu. Aliquam nisl massa, blandit at, accumsan sed, porta vel, metus. Duis fringilla quam ut eros.</p>
+    
         </div>
     </div>
-    <!-- <div id = "bottom" class=" page-1 o0"><h1 id='book-title'>Book</h1><h3 id= 'email'>cowboykillersllc@gmail.com</h3></div> -->
     <div id = "bottom" class=" page-1 o0"></div>
     <div id = "right" class=" page-1 o0"></div>
     <div id ="top" class =" page-1 o0"></div>
@@ -157,56 +163,3 @@ layout: none
   }
     
 </script>
-<!-- ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
----
-
-<!DOCTYPE html>
-<html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <title>Cowboy Killers</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-<link rel="stylesheet" href="./style.css">
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r126/three.min.js" integrity="sha512-n8IpKWzDnBOcBhRlHirMZOUvEq2bLRMuJGjuVqbzUJwtTsgwOgK5aS0c1JA647XWYfqvXve8k3PtZdzpipFjgg==" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/three@0.126.0/examples/js/loaders/GLTFLoader.js"></script>
-
-<script type="module" src="OrbitControls.js"></script>
-
-</head>
-<body>
-
-
-        Tallboy
-Wax museum 
-Ragsak - hippie
-Darthaniel
-Old Dinglish 
--->
-
-<!-- <div id="car-scene" >
-
-    <button id="top"><img src="https://icongr.am/feather/chevron-up.svg"/></button>
-    <button id="bottom"><img src="https://icongr.am/feather/chevron-down.svg"/></button>
-    <button id="left"><img src="https://icongr.am/feather/chevron-left.svg"/></button>
-    <button id="right"><img src="https://icongr.am/feather/chevron-right.svg"/></button>
-</div>
-
-    <div class="top-layer top-hide-layer">
-        <button id="top-hide"><img src="https://icongr.am/feather/chevron-down.svg?color=ffffff"/></button>
-    </div>
-  <div class="bottom-layer bottom-hide-layer buttons">
-    <button id="bottom-hide"><img src="https://icongr.am/feather/chevron-up.svg?color=ffffff"/></button>
-  </div>
-  <div class="left-layer left-hide-layer buttons">
-    <button id="left-hide"><img src="https://icongr.am/feather/chevron-right.svg?color=ffffff"/></button>
-  </div>
-  <div class="right-layer right-hide-layer buttons">
-    <button id="right-hide"><img src="https://icongr.am/feather/chevron-left.svg?color=ffffff"/></button>
-  </div> 
-  <script type="module" src="./script.js"></script>
-
-</body>
-</html> --> 

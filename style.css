@@ -17,8 +17,8 @@ html {
 .o0 {
     opacity: 0 !important;
 }
-/* 
-#home-header {
+
+/* #home-header {
     z-index: 3;
     position: relative;
     height: 100%;
@@ -27,18 +27,29 @@ html {
     top: 50%;
     left: 50%;
 
-}
+} */
+/* #home-header {
+    z-index: 3;
+    background: none;
+    border: 1px solid red;
+    width: 80%;
+    height: 20%;
+    margin: 10%
+} */
+
 #home-title {
     z-index: 3;
-    font-size: 120px;
-    position: relative;
+    font-size: 80px;
+    position: absolute;
+    background: none;
+    width: 532px;
+    
+    /* height: 160px; */
     top: 20%;
     left: 50%;
-    margin-left: -290px;
+    margin-left: -266;
+}
 
-
-
-} */
 #home-break {
     display: none;
 }
@@ -69,29 +80,44 @@ button {
     cursor: pointer;
     position: absolute;
     z-index: 3;
+    font-size: 40px;
+    /* padding-top: 20px;
+    padding-bottom;: 20px */
+
   }
 #top-button { 
     position: absolute;
     top: 0%;
-    margin-left: -60px;
+    margin-left: -74px;
     left: 50%;
+    transform: rotate(180deg);
+    padding-bottom: 30px;
+
     
   } 
   #bottom-button {
     position: absolute;
     bottom: 0px;
-    margin-left: -60px;
+    margin-left: -58px;
     left: 50%;
+    /* transform: rotate(180deg); */
+    padding-bottom: 30px;
   }
   #left-button {
     position: absolute;
     top: 50%;
     left: 0px;
+    margin-left:-20px;
+    margin-top: -75px;
+    transform: rotate(90deg);
   }
   #right-button {
     position: absolute;
     top: 50%;
     right: 0px;
+    margin-right: -20px;
+    margin-top: -68px;
+    transform: rotate(-90deg);
   }
 
 .container {
@@ -140,7 +166,7 @@ button {
     position: relative;
     
     /* height: 85%; */
-    height: calc(100vh - 15vh);
+    height: calc(90vh - 15vh);
     width: 80%;
     margin: 10%;
     border: 1px solid red;
@@ -148,6 +174,8 @@ button {
     z-index: 3;
 
 }
+
+
 /* .content {
     position: relative;
     width:100%; 
