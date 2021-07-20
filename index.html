@@ -13,27 +13,19 @@ layout: none
     <script type="module" src="OrbitControls.js"></script>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   
   </head>
   
   <div class="container">
-      <!-- <button id="top-button"><img src="https://icongr.am/feather/chevron-up.svg?size=120"/></button> -->
-      <button id="top-button">MERCH</button>
-      
-      <!-- <button id="left-button"><img src="https://icongr.am/feather/chevron-left.svg?size=120"/></button> -->
-      <button id="left-button">SHOWS</button>
-      
-      <!-- <button id="bottom-button"><img src="https://icongr.am/feather/chevron-down.svg?size=120"/></button> -->
-      <button id="bottom-button">BOOK</button>
-      
-      <!-- <button id="right-button"><img src="https://icongr.am/feather/chevron-right.svg?size=120"/></button> -->
-
-      <button id="right-button">PRESS</button>
+      <button id="top-button"><text id = "top-button-text" >MERCH</text></button>
+      <button id="left-button"><text id = "left-button-text" >SHOWS</text></button>
+      <button id="bottom-button"><text id = "bottom-button-text" >BOOK</text></button>
+      <button id="right-button"><text id = "right-button-text" >PRESS</text></button>
 
       <div id = "home" class=" page-0">
-          <!-- <div id = 'home-header'> -->
             <h1 id='home-title'>Cowboy <br id='home-break'>Killers</h1>
-          <!-- </div> -->
       </div>
 
       <div id = "left" class=" page-1 o0">
@@ -54,7 +46,7 @@ layout: none
 </div>
 <script type="module" src="./script.js"></script>
 <script>
-
+    
     function animateCSS(element, animationName, callback) {
         const node = document.querySelector(element)
         node.classList.add('animated', animationName)
@@ -135,6 +127,7 @@ layout: none
             let directions = [];
             let outDirection = "";
             let inDirection = "";
+            let saveText = 'HOME'
 
             // if home is hidden 
             if (document.querySelector('#home').classList.contains('o0')) { // better way to do this? 
@@ -142,16 +135,43 @@ layout: none
                 outSlide = '#' + (button.id).split('-')[0];
                 // home is inslide
                 inSlide = '#home'
+
+                // hide button
+                $('#' + buttonId + "-text").hide()
+                $('#' + buttonId + "-text").text(saveText);
+                saveText = "HOME"
+                // show all buttons with correct names in place 
+                for (const button of buttons) { 
+                    $('#' + (button.id) + "-text").fadeIn()
+                }
+                
+                
+
+                // button inner text to press/merch/etc
+
+
             // if button page is hidden
             } else if (document.querySelector('#' + (button.id).split('-')[0]).classList.contains('o0')) {
                 // buttonId is inslide
                 inSlide = '#' + (button.id).split('-')[0];
                 // butttonid is outslide
                 outSlide = '#home'
+
+                // hide all buttons 
+                for (const button of buttons) { 
+                    $('#' + (button.id) + "-text").hide()
+                }
+
+                // show home button in place
+                let buttonText = $('#' + buttonId + "-text")
+                saveText = buttonText.text();
+                buttonText.text("HOME");
+                buttonText.fadeIn("slow");
+
+            
             } else {
                 console.log('error:', '#' + (button.id).split('-')[0] );
             }
-
             //directions
             directions = getDirections(inSlide, outSlide);
             inDirection = directions[0]
@@ -159,6 +179,11 @@ layout: none
 
             // console.log('out:', outSlide, outDirection, 'in:', inSlide, inDirection );
             transitionSlides(outSlide, outDirection, inSlide, inDirection);
+
+
+
+            // button.fir
+            // transitionSlides(outSlide, outDirection, inSlide, inDirection);
     });
   }
     
