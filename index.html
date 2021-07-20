@@ -115,7 +115,7 @@ layout: none
         }
         return [inDirection, outDirection];
     }
-
+    let saveText = 'HOME'
     const buttons = document.getElementsByTagName("button");
     for (const button of buttons) {
         button.addEventListener('click', () => {
@@ -127,7 +127,7 @@ layout: none
             let directions = [];
             let outDirection = "";
             let inDirection = "";
-            let saveText = 'HOME'
+            
 
             // if home is hidden 
             if (document.querySelector('#home').classList.contains('o0')) { // better way to do this? 
@@ -145,8 +145,6 @@ layout: none
                     $('#' + (button.id) + "-text").fadeIn()
                 }
                 
-                
-
                 // button inner text to press/merch/etc
 
 
