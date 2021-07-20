@@ -124,7 +124,10 @@ button {
     height: 15vh;
 }
 #show-title {
-    font-size: 64px;
+    font-size: 80px;
+    position: absolute;
+    left: 30%;
+    top: 20%;
 }
 
 #show-body {
@@ -134,5 +137,39 @@ button {
     margin: 10%;
     overflow-y: scroll !important;
     z-index: 3;
+}
 
+#book-header {
+    position: relative;
+    height: 15vh;
+}
+#book-title {
+    font-size: 80px;
+    position: absolute;
+    left: 40%;
+    top: 20%;
+}
+
+#book-body {
+    position: relative;
+    height: calc(90vh - 15vh);
+    width: 80%;
+    margin: 10%;
+    overflow-y: scroll !important;
+    z-index: 3;
+}
+label {
+    display: block;
+    font-size: 56px;
+}
+
+input,
+label {
+    margin: .6rem .5rem ;
+}
+
+#start {
+    /* height: 100px; */
+    width: 400px;
+    font-size: 32px;
 }
