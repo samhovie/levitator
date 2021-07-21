@@ -38,12 +38,15 @@ html {
 }
 
 button {
+    /* border: 1px solid red; */
     border: none;
     background: none;
     cursor: pointer;
     position: absolute;
     z-index: 3;
     font-size: 40px;
+    padding: 10px;
+
   }
 
 #top-button { 
@@ -52,7 +55,7 @@ button {
     margin-left: -74px;
     left: 50%;
     transform: rotate(180deg);
-    padding-bottom: 30px;
+    padding-bottom: 40px;
   } 
 
   #bottom-button {
@@ -60,14 +63,14 @@ button {
     bottom: 0px;
     margin-left: -58px;
     left: 50%;
-    padding-bottom: 30px;
+    padding-bottom: 40px;
+
   }
 
   #left-button {
     position: absolute;
     top: 50%;
     left: 0px;
-    /* margin-left: -20px; */
     margin-top: -75px;
     transform: rotate(90deg);
   }
@@ -76,7 +79,6 @@ button {
     position: absolute;
     top: 50%;
     right: 0px;
-    /* margin-right: -20px; */
     margin-top: -68px;
     transform: rotate(-90deg);
   }
@@ -119,26 +121,35 @@ button {
     padding-left: 10px;
 }
 
+#show-container {
+    display: flex;
+    justify-content: center;
+} 
+
 #show-header {
-    position: relative;
-    height: 15vh;
-}
-#show-title {
-    font-size: 80px;
     position: absolute;
-    left: 30%;
-    top: 20%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 25%;
 }
 
 #show-body {
-    position: relative;
-    height: calc(90vh - 15vh);
-    width: 80%;
-    margin: 10%;
-    overflow-y: scroll !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+    height: 75%;
+    overflow-y: scroll;
+    top: 25%;
     z-index: 3;
 }
-
+#show-title {
+    font-size: 80px;
+}
 #book-header {
     position: relative;
     height: 15vh;
@@ -169,7 +180,6 @@ label {
 }
 
 #start {
-    /* height: 100px; */
     width: 400px;
     font-size: 32px;
 }
