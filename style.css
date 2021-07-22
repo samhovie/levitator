@@ -147,26 +147,7 @@ button {
 #show-title, #merch-title {
     font-size: 88px;
 }
-#book-header {
-    position: relative;
-    height: 15vh;
-}
-#book-title {
-    font-size: 80px;
-    position: absolute;
-    left: 40%;
-    top: 20%;
-}
 
-#book-body {
-    position: relative;
-    /* height: calc(90vh - 15vh); */
-    width: 80%;
-    margin: 10%;
-    height: 400px;
-    /* overflow-y: scroll !important; */
-    z-index: 3;
-}
 
 .event-title {
     font-size: 64px;
@@ -201,31 +182,59 @@ button {
 label {
     display: block;
     font-size: 46px;
+    padding: 5px;
+}
+#book-header {
+    position: relative;
+    height: 15vh;
+}
+#book-title {
+    font-size: 80px;
+    position: absolute;
+    left: 40%;
+    top: 20%;
 }
 
-.book-form {
-    height: 50%;
+#book-body {
+    position: relative;
+    /* height: calc(90vh - 15vh); */
+    width: 80%;
+    margin: 10%;
+    height: fit-content;
+    /* overflow-y: scroll !important; */
+    z-index: 3;
+    font-size: 32px;
 }
+/* .book-form { */
+    /* display: inline-block; */
+    
+/* } */
 
 input  {
-    width: 320px;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
+    /* width: 320px; */
+    /* padding: 12px 20px; */
+    /* margin: 8px 0; */
+    /* box-sizing: border-box; */
     font-size: 32px;
+    /* height: fit-content; */
   }
   textarea  {
     width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
+    /* padding: 12px 20px; */
+    /* margin: 8px 0; */
+    /* box-sizing: border-box; */
     font-size: 32px;
   }
   
-  #fname {
+  .time-range{
+      display: flex;
+      height: 20px;
+  }
+  
+  /* #fname {
       width: 70%;
       height: 300px;
-  }
+  } */
 
  #book-submit {
     border: 1px solid grey;
