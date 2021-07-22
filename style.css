@@ -121,12 +121,14 @@ button {
     padding-left: 10px;
 }
 
-#show-container {
+#show-container, #merch-container {
     display: flex;
     justify-content: center;
+    height: 100%;
+    width: 100%;
 } 
 
-#show-header {
+#show-header, #merch-header {
     position: absolute;
     top: 0;
     left: 0;
@@ -137,18 +139,17 @@ button {
     height: 25%;
 }
 
-#show-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#show-body, #merch-body {
+    /* border: 1px solid red; */
     width: 75%;
     height: 75%;
     overflow-y: scroll;
     top: 25%;
     z-index: 3;
 }
-#show-title {
-    font-size: 80px;
+
+#show-title, #merch-title {
+    font-size: 88px;
 }
 #book-header {
     position: relative;
@@ -169,7 +170,7 @@ button {
     overflow-y: scroll !important;
     z-index: 3;
 }
-label {
+/* label {
     display: block;
     font-size: 56px;
 }
@@ -177,9 +178,47 @@ label {
 input,
 label {
     margin: .6rem .5rem ;
+} */
+/* .event {
+    border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+.event-title {
+    font-size: 64px;
+    /* margin: 5px; */
+    /* width: fit-content; */
+    margin: 0 auto;
+    /* justify-self: center; */
+    /* padding-top:; */
+    white-space: nowrap;
+    position: relative;
+    display: block;
+    /* border: 1px solid red; */
+    height: fit-content;
+    width: fit-content;
+    margin: 0 auto;
 }
 
-#start {
-    width: 400px;
-    font-size: 32px;
+.event-datetime {
+    font-size: 45px;
+    white-space: nowrap;
+    display: block;
+    /* border: 1px solid red; */
+    width: 100%;
+    /* width: fit-content;
+    position: relative; */
+    margin: 0 auto; 
+    height: fit-content;
+    position: relative;
+    display: block;
+    width: fit-content;
+
+}
+
+.event {
+    display: block;
+    position: relative;
 }
