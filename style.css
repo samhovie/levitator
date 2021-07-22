@@ -13,15 +13,13 @@ html {
     height: 100%;
     margin: 0;
     overflow: hidden;
+    /* z-index: inherit; */
   }
 
 .o0 {
     opacity: 0 !important;
 }
 
-/* div {
-    border: 1px solid red;
-} */
 #home-title {
     z-index: 3;
     font-size: 80px;
@@ -38,7 +36,6 @@ html {
 }
 
 button {
-    /* border: 1px solid red; */
     border: none;
     background: none;
     cursor: pointer;
@@ -140,7 +137,6 @@ button {
 }
 
 #show-body, #merch-body {
-    /* border: 1px solid red; */
     width: 75%;
     height: 75%;
     overflow-y: scroll;
@@ -164,39 +160,20 @@ button {
 
 #book-body {
     position: relative;
-    height: calc(90vh - 15vh);
+    /* height: calc(90vh - 15vh); */
     width: 80%;
     margin: 10%;
-    overflow-y: scroll !important;
+    height: 400px;
+    /* overflow-y: scroll !important; */
     z-index: 3;
 }
-/* label {
-    display: block;
-    font-size: 56px;
-}
-
-input,
-label {
-    margin: .6rem .5rem ;
-} */
-/* .event {
-    border: 1px solid red;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} */
 
 .event-title {
     font-size: 64px;
-    /* margin: 5px; */
-    /* width: fit-content; */
     margin: 0 auto;
-    /* justify-self: center; */
-    /* padding-top:; */
     white-space: nowrap;
     position: relative;
     display: block;
-    /* border: 1px solid red; */
     height: fit-content;
     width: fit-content;
     margin: 0 auto;
@@ -206,10 +183,7 @@ label {
     font-size: 45px;
     white-space: nowrap;
     display: block;
-    /* border: 1px solid red; */
     width: 100%;
-    /* width: fit-content;
-    position: relative; */
     margin: 0 auto; 
     height: fit-content;
     position: relative;
@@ -217,8 +191,29 @@ label {
     width: fit-content;
 
 }
-
+/* div {
+    border: 1px solid red;
+} */
 .event {
     display: block;
     position: relative;
 }
+label {
+    display: block;
+    font-size: 46px;
+}
+
+.book-form {
+    height: 50%;
+}
+
+input {
+    width: 320px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    font-size: 32px;
+  }
+  
+
+

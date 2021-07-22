@@ -86,11 +86,28 @@ layout: none
         </div>
 
         <div id ='book-body' style="font-size: 80px;">
-            <label for="start">Date:</label>
+
+            <div class = "book-form">
+                <label for="start">Date:</label>
 
 <input type="date" id="start" name="date"
        value="2018-07-22"
        min="2018-01-01" max="2018-12-31">
+            
+       <label for="appt">Start:</label>
+
+       <input type="time" id="appt-start" name="appt"
+              min="09:00" max="18:00" required>
+
+    <label for="appt">End:</label>
+
+    <input type="time" id="appt-end" name="appt"
+            min="09:00" max="18:00" required>
+    </div>
+            
+
+
+
 
        
 
