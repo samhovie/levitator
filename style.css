@@ -207,13 +207,59 @@ label {
     height: 50%;
 }
 
-input {
+input  {
     width: 320px;
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
     font-size: 32px;
   }
+  textarea  {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    font-size: 32px;
+  }
   
+  #fname {
+      width: 70%;
+      height: 300px;
+  }
 
+ #book-submit {
+    border: 1px solid grey;
+    background: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 3;
+    font-size: 40px;
+    padding: 10px;
+    margin: 20px 0px;
 
+  } 
+
+  /* #book-submit {
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    
+} */
+
+/* #appt-start {
+    width: ;
+} */
