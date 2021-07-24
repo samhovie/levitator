@@ -58,7 +58,8 @@ button {
   #bottom-button {
     position: absolute;
     bottom: 0px;
-    margin-left: -58px;
+    /* margin-left: -58px; */
+    margin-left: -102px;
     left: 50%;
     padding-bottom: 50px;
 
@@ -160,7 +161,7 @@ button {
     margin: 0 auto;
 }
 
-.event-datetime {
+.event {
     font-size: 45px;
     white-space: nowrap;
     display: block;
@@ -175,14 +176,14 @@ button {
 /* div {
     border: 1px solid red;
 } */
-.event {
+/* .event {
     display: block;
     position: relative;
-}
+} */
 label {
     display: block;
     font-size: 46px;
-    padding: 5px;
+    padding: 10px;
 }
 #book-header {
     position: relative;
@@ -191,8 +192,10 @@ label {
 #book-title {
     font-size: 80px;
     position: absolute;
-    left: 40%;
+    left: 50%;
+    margin-left: -144px;
     top: 20%;
+    
 }
 
 #book-body {
