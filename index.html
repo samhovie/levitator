@@ -137,12 +137,12 @@ layout: none
             <h2 id = 'press-title'>Press</h2>
         </div>
         <div id = 'press-body'>
-        <iframe id = 'frame' width="100%" height="515" 
+        <iframe id = 'frame-1' width="100%" height="815" 
         src="https://www.youtube.com/embed/WPxxCua_Jew">
         </iframe>
 
         
-        <iframe id = 'frame' width="100%" height="515" 
+        <iframe id = 'frame-2' width="100%" height="815" 
         src="https://www.youtube.com/embed/3IuliLXYCA0">
         </iframe>
 
@@ -276,13 +276,23 @@ layout: none
                 // hide button
                 $('#' + buttonId + "-text").hide()
                 $('#' + buttonId + "-text").text(saveText);
-                saveText = "HOME"
+                saveText = "HOME";
+                // 
+
+
                 // show all buttons with correct names in place 
                 for (const button of buttons) { 
                     $('#' + (button.id) + "-text").fadeIn()
                 }
+
+                if (buttonId.localeCompare('right-button') === 0) {
+
+                $('#' + buttonId).css({ top: '50%' });
+
+                }
                 
-                // button inner text to press/merch/etc
+
+
 
 
             // if button page is hidden
@@ -303,8 +313,13 @@ layout: none
                 buttonText.text("HOME");
                 buttonText.fadeIn("slow");
 
+                if (buttonId.localeCompare('right-button') === 0) {
+                    $('#' + buttonId).css({ top: '7%' });
+                }
+        
+            } 
             
-            } else {
+            else {
                 console.log('error:', '#' + (button.id).split('-')[0] );
             }
             //directions
