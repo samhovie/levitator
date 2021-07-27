@@ -126,7 +126,7 @@ button {
     width: 100%;
 } 
 
-#show-header, #merch-header {
+#show-header, #merch-header, #press-header {
     position: absolute;
     top: 0;
     left: 0;
@@ -134,21 +134,45 @@ button {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 25%;
+    height: 20%;
 }
 
-#show-body, #merch-body {
-    width: 75%;
-    height: 75%;
+/* #press-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+} */
+
+#show-body, #merch-body, #press-body {
+    width: 85%;
+    height: 80%;
     overflow-y: scroll;
-    top: 25%;
+    top: 15%;
     z-index: 3;
 }
+/* #press-body {
+    width: 85%;
+    height: 75%;
+    overflow-y: scroll;
+    top: 20%;
+    z-index: 3;
+} */
 
-#show-title, #merch-title {
+#show-title, #merch-title, #press-title {
     font-size: 88px;
 }
 
+#coming-soon {
+    font-size: 58px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 .event-title {
     font-size: 64px;
@@ -201,12 +225,18 @@ label {
 #book-body {
     position: relative;
     /* height: calc(90vh - 15vh); */
-    width: 80%;
-    margin: 10%;
+    width: fit-content;
+    /* margin: 10%; */
     height: fit-content;
     /* overflow-y: scroll !important; */
     z-index: 3;
-    font-size: 32px;
+    /* font-size: 32px; */
+    /* margin: auto 0; */
+    margin-left:auto;
+    margin-right:auto;
+    /* margin-top:auto;
+    margin-bottom:auto; */
+    padding-top: 300px;
 }
 /* .book-form { */
     /* display: inline-block; */
@@ -248,8 +278,21 @@ input  {
     font-size: 40px;
     padding: 10px;
     margin: 20px 0px;
+    border-radius: 5px;
 
   } 
+  #frame {
+      z-index: 4;
+      margin-top: 100px;
+      margin-left: 10px;
+  }
+
+  #email-link {
+      font-size: 48px;
+      width: fit-content;
+      color: darkblue;
+
+  }
 
   /* #book-submit {
     display: inline-block;
