@@ -22,8 +22,9 @@ html {
 
 @font-face {
     font-family: "KCLazyDaisy";
-    src: url("/assets/fonts/KCLazyDaisy.otf");
+    src: url("../cowboykillers/assets/fonts/KCLazyDaisy.otf") format("opentype");
   }
+  /* /Users/sammyhovie/Documents/cowboykillers/assets/fonts/KCLazyDaisy.otf */
 
 #home-title {
     z-index: 3;
