@@ -20,10 +20,10 @@ layout: none
   </head>
   
   <div class="container">
-      <button id="top-button"><text id = "top-button-text" >MERCH</text></button>
-      <button id="left-button"><text id = "left-button-text" >SHOWS</text></button>
-      <button id="bottom-button"><text id = "bottom-button-text" >INQUIRIES</text></button>
-      <button id="right-button"><text id = "right-button-text" >PRESS</text></button>
+      <button class="nav-button" id="top-button"><text id = "top-button-text" >MERCH</text></button>
+      <button class="nav-button" id="left-button"><text id = "left-button-text" >SHOWS</text></button>
+      <button class="nav-button" id="bottom-button"><text id = "bottom-button-text" >INQUIRIES</text></button>
+      <button class="nav-button" id="right-button"><text id = "right-button-text" >PRESS</text></button>
 
       <div id = "home" class=" page-0">
             <h1 id='home-title'>Cowboy <br id='home-break'>Killers</h1>
@@ -128,7 +128,14 @@ layout: none
 
         <div id ='book-body' >
 
-            <a id = 'email-link' href="mailto:cowboykillersllc@gmail.com">cowboykillersllc@gmail.com</a>
+            <form id="my-form" action="https://formspree.io/f/mrgrybrz" method="POST">
+                <label>Email:</label>
+                <input type="email" name="email" />
+                <label>Message:</label>
+                <input type="text" name="message" />
+                <button id="my-form-button">Submit</button>
+                <p id="my-form-status"></p>
+              </form>
             
         </div>
     </div>
@@ -253,7 +260,10 @@ layout: none
         return [inDirection, outDirection];
     }
     let saveText = 'HOME'
-    const buttons = document.getElementsByTagName("button");
+    // const buttons = document.getElementsByTagName("button");
+    const buttons = document.getElementsByClassName("nav-button");
+    // const buttons = 
+    console.log(buttons)
     for (const button of buttons) {
         button.addEventListener('click', () => {
             let buttonId = button.id;
@@ -337,4 +347,27 @@ layout: none
     });
   }
     
+</script>
+
+<script>
+    var form = document.getElementById("my-form");
+    
+    async function handleSubmit(event) {
+      event.preventDefault();
+      var status = document.getElementById("my-form-status");
+      var data = new FormData(event.target);
+      fetch(event.target.action, {
+        method: form.method,
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+      }).then(response => {
+        status.innerHTML = "Thanks for your submission!";
+        form.reset()
+      }).catch(error => {
+        status.innerHTML = "Oops! There was a problem submitting your form"
+      });
+    }
+    form.addEventListener("submit", handleSubmit)
 </script>
