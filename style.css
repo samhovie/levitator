@@ -22,20 +22,15 @@ html {
 
 @font-face {
     font-family: 'KC Lazy Daisy';
-    src: url('assets/fonts/KCLazyDaisyRegular.woff2') format('woff2'),
-        url('assets/fonts/KCLazyDaisyRegular.woff') format('woff');
+    src: url('css/fonts/KCLazyDaisyRegular.eot');
+    src: url('css/fonts/KCLazyDaisyRegular.eot?#iefix') format('embedded-opentype'),
+        url('css/fonts/KCLazyDaisyRegular.woff2') format('woff2'),
+        url('css/fonts/KCLazyDaisyRegular.woff') format('woff'),
+        url('css/fonts/KCLazyDaisyRegular.svg#KCLazyDaisyRegular') format('svg');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
-
-/* @font-face {
-    font-family: "KCLazyDaisy";
-    src: url("assets/fonts/KCLazyDaisy.otf") format("opentype");
-    font-weight: bold;
-    font-style: normal;
-  } */
-  /* /Users/sammyhovie/Documents/cowboykillers/assets/fonts/KCLazyDaisy.otf */
 
 #home-title {
     z-index: 3;
