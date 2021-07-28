@@ -21,21 +21,33 @@ html {
 }
 
 @font-face {
+    font-family: 'KC Lazy Daisy';
+    src: url('assets/fonts/KCLazyDaisyRegular.woff2') format('woff2'),
+        url('assets/fonts/KCLazyDaisyRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* @font-face {
     font-family: "KCLazyDaisy";
     src: url("assets/fonts/KCLazyDaisy.otf") format("opentype");
     font-weight: bold;
     font-style: normal;
-  }
+  } */
   /* /Users/sammyhovie/Documents/cowboykillers/assets/fonts/KCLazyDaisy.otf */
 
 #home-title {
     z-index: 3;
-    font-family: 'KCLazyDaisy';
+    font-family: 'KC Lazy Daisy';
+    font-weight: normal;
+    font-style: normal;
+
     font-size: 80px;
     position: absolute;
     background: none;
     /* width: 32px; */
-    width: 80%;
+    width: 85%;
     top: 15%;
     left: 50%;
     margin-left: -266px;
