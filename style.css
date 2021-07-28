@@ -20,12 +20,19 @@ html {
     opacity: 0 !important;
 }
 
+@font-face {
+    font-family: "KCLazyDaisy";
+    src: url("../assets/fonts/KCLazyDaisy.otf");
+  }
+
 #home-title {
     z-index: 3;
+    font-family: 'KCLazyDaisy';
     font-size: 80px;
     position: absolute;
     background: none;
-    width: 532px;
+    /* width: 32px; */
+    width: 80%;
     top: 15%;
     left: 50%;
     margin-left: -266px;

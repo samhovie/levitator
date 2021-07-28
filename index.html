@@ -26,7 +26,9 @@ layout: none
       <button class="nav-button" id="right-button"><text id = "right-button-text" >PRESS</text></button>
 
       <div id = "home" class=" page-0">
-            <h1 id='home-title'>Cowboy <br id='home-break'>Killers</h1>
+            <!-- <h1 id='home-title'>Cowboy <br id='home-break'>Killers</h1>
+             -->
+             <h1 id='home-title'>Cowboy Killers</h1>
       </div>
 
       <div id = "left" class=" page-1 o0">
@@ -260,10 +262,7 @@ layout: none
         return [inDirection, outDirection];
     }
     let saveText = 'HOME'
-    // const buttons = document.getElementsByTagName("button");
     const buttons = document.getElementsByClassName("nav-button");
-    // const buttons = 
-    console.log(buttons)
     for (const button of buttons) {
         button.addEventListener('click', () => {
             let buttonId = button.id;
