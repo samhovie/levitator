@@ -5,8 +5,16 @@ layout: none
 <head>
     <meta charset="UTF-8">
     <title>Cowboy Killers</title>
+
+    <link rel="stylesheet" href="./normalize.css">
     
     <link rel="stylesheet" href="./style.css">
+
+
+
+    <!-- <link rel="stylesheet" href="./style.css"> -->
+
+    
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r126/three.min.js" integrity="sha512-n8IpKWzDnBOcBhRlHirMZOUvEq2bLRMuJGjuVqbzUJwtTsgwOgK5aS0c1JA647XWYfqvXve8k3PtZdzpipFjgg==" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/three@0.126.0/examples/js/loaders/GLTFLoader.js"></script>
@@ -18,49 +26,29 @@ layout: none
 
   </head>
   
-  <div class="container">
-      <button class="nav-button" id="top-button"><text id = "top-button-text" >MERCH</text></button>
-      <button class="nav-button" id="left-button"><text id = "left-button-text" >SHOWS</text></button>
-      <button class="nav-button" id="bottom-button"><text id = "bottom-button-text" >INQUIRIES</text></button>
-      <button class="nav-button" id="right-button"><text id = "right-button-text" >PRESS</text></button>
+  <div class="containerz">
+      <button class="nav-button" id="top-button"><text class = 'nav-button-text' id = "top-button-text" >MERCH</text></button>
+      <button class="nav-button" id="left-button"><text class = 'nav-button-text' id = "left-button-text" >SHOWS</text></button>
+      <button class="nav-button" id="bottom-button"><text class = 'nav-button-text' id = "bottom-button-text" >INQUIRIES</text></button>
+      <button class="nav-button" id="right-button"><text class = 'nav-button-text' id = "right-button-text" >PRESS</text></button>
 
-      <div id = "home" class=" page-0">
-            <!-- <h1 id='home-title'>Cowboy <br id='home-break'>Killers</h1>
-             -->
+      <div id = "home" class="page page-0">
              <h1 id='home-title'>Cowboy Killers</h1>
       </div>
 
-      <div id = "left" class=" page-1 o0">
+      <div id = "left" class="page page-1 o0">
           <div id="show-container">
           <div id="show-header">
               <h2 id = 'show-title'>Live Shows</h2>
           </div>
-<!-- 
-    8/7 Walloon Lake Winery or Lafond 7-9
-8/13 PYSA 7-9 $500
-8/21 Van Pelt Alley CHX $700
-8/27 Manthei Barn Friends & Family 6-10
-8/28 Downtown Petoskey 7-9 $700
-9/4 Camp Daggett (Harbor Hall) 3-5 $500
-10/8 Manthei Barn Halloween Party 6-10
-10/9? Sol of the Lost Tamarack Halloween
-10/16 Rotary @ Winter Sports Park 6-8 $700
-12/31 Crooked Tree 7-9 $1500 -->
-
-<!-- <h5 class="event-title">Private Event</h5> <br>
-<p class ="event-datetime">August 7 ... 7 - 9pm</p>
-<br>
-<br> -->
 
 
-
-<!-- <button>UPCOMING | ALL</button> -->
-
-
-          <div id ='show-body' >
+          <div id ='show-body' class='example'>
+              <br>
             <p class ="event ">August 7</p> <br>
             <p class="event ">Walloon Lake Winery</p> <br>
             <p class ="event ">7 - 9pm</p> <br>
+            <br>
             <br>
             <br>
             
@@ -69,28 +57,35 @@ layout: none
             <p class ="event">7 - 9pm</p> <br>
             <br>
             <br>
+            <br>
             
             <p class ="event ">August 21</p> <br>
             <p class="event ">Downtown Charlevoix</p> <br>
-            <p class ="event ">- </p> <br>
+            <p class ="event ">TBD</p> <br>
+            <br>
             <br>
             <br>
 
             <p class ="event ">August 27</p> <br>
-            <p class="event ">Private Event</p> <br>
+            <p class="event ">Manthei Barn</p> <br>
+            <p class="event ">2616 Townsend Road</p> <br>
             <p class ="event ">6 - 10pm</p> <br>
+            <p class="event ">Featuring: Resort Pike BBQ </p> <br>
             <br>
-            <br>1
+            <br>
+            <br>
 
             <p class ="event ">August 28</p> <br>
             <p class="event ">Downtown Petoskey</p> <br>
             <p class ="event " >7 - 9pm</p> <br>
             <br>
             <br>
+            <br>
 
             <p class ="event ">September 4</p> <br>
             <p class="event ">Private Event</p> <br>
             <p class ="event ">3 - 5pm</p> <br>
+            <br>
             <br>
             <br>
 
@@ -102,7 +97,8 @@ layout: none
 
             <p class ="event ">October 9</p> <br>
             <p class="event ">Private Event</p> <br>
-            <p class ="event ">-</p> <br>
+            <p class ="event ">TBD</p> <br>
+            <br>
             <br>
             <br>
 
@@ -111,10 +107,12 @@ layout: none
             <p class ="event ">6 - 8pm</p> <br>
             <br>
             <br>
+            <br>
 
             <p class ="event ">December 31</p> <br>
             <p class="event ">Private Event</p> <br>
             <p class ="event ">7 - 9pm</p> <br>
+            <br>
             <br>
             <br>
 
@@ -122,25 +120,29 @@ layout: none
             </div>
         </div>
     </div>
-    <div id = "bottom" class=" page-1 o0">
+    <div id = "bottom" class="page page-1 o0">
         <div id="book-header">
-            <h2 id = 'book-title'>Inquires</h2>
+            <h2 id = 'book-title'>Inquiries</h2>
         </div>
 
         <div id ='book-body' >
 
             <form id="my-form" action="https://formspree.io/f/mrgrybrz" method="POST">
-                <label>Email:</label>
-                <input type="email" name="email" />
-                <label>Message:</label>
-                <input type="text" name="message" />
+                <label style= 'padding-bottom: 30px;' >Email:</label>
+                <input size="30" type="email" name="email"  />
+                <br>
+                <label style="padding-top: 30px; padding-bottom: 30px; ">Message:</label>
+                <!-- <input type="text" name="message"  /> -->
+
+                <textarea  type="text" name="message" rows="8" cols="50"></textarea>
+
                 <button id="my-form-button">Submit</button>
-                <p id="my-form-status"></p>
+                <p style = 'font-size: 32px;'id="my-form-status"></p>
               </form>
             
         </div>
     </div>
-    <div id = "right" class=" page-1 o0">
+    <div id = "right" class="page page-1 o0">
         <div id="press-header">
             <h2 id = 'press-title'>Press</h2>
         </div>
@@ -163,25 +165,33 @@ layout: none
     </div>
 
     </div>
-    <div id ="top" class =" page-1 o0">
+    <div id ="top" class ="page page-1 o0">
         <div id="merch-container">
             <div id="merch-header">
                 <h2 id = 'merch-title'>Merch</h2>
             </div>
   
             <div id ='merch-body' >
-                
 
-                <!-- <div class = 'merch-card'>
-                    <img src="" alt="">
-                    <h5>Band Tee</h5><h4>$30</h4>
-                </div> -->
+                <!-- <div class="card" >
+                    <svg class="bd-placeholder-img card-img-top"  xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text></svg>
 
-                <p id = 'coming-soon'>Coming Soon</p>
-                
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div> -->
+
+                  <!-- <p></p> -->
+
+                  <p style="font-family: Helvetica, sans-serif; font-size: 60px; width: fit-content; margin-right: auto; margin-left: auto;">coming soon</p>
+
               </div>
           </div>
     </div>
+
+    <!--  -->
 
 
 
@@ -272,61 +282,43 @@ layout: none
             let directions = [];
             let outDirection = "";
             let inDirection = "";
-            
 
             // if home is hidden 
             if (document.querySelector('#home').classList.contains('o0')) { // better way to do this? 
                 // buttonId is outSlide
                 outSlide = '#' + (button.id).split('-')[0];
                 // home is inslide
-                inSlide = '#home'
-
+                inSlide = '#home';
                 // hide button
                 $('#' + buttonId + "-text").hide()
                 $('#' + buttonId + "-text").text(saveText);
                 saveText = "HOME";
-                // 
-
-
                 // show all buttons with correct names in place 
                 for (const button of buttons) { 
                     $('#' + (button.id) + "-text").fadeIn()
                 }
-
                 if (buttonId.localeCompare('right-button') === 0) {
-
-                $('#' + buttonId).css({ top: '50%' });
-
+                    $('#' + buttonId).css({ top: '50%' });
                 }
-                
-
-
-
-
             // if button page is hidden
             } else if (document.querySelector('#' + (button.id).split('-')[0]).classList.contains('o0')) {
                 // buttonId is inslide
                 inSlide = '#' + (button.id).split('-')[0];
                 // butttonid is outslide
                 outSlide = '#home'
-
                 // hide all buttons 
                 for (const button of buttons) { 
                     $('#' + (button.id) + "-text").hide()
                 }
-
                 // show home button in place
                 let buttonText = $('#' + buttonId + "-text")
                 saveText = buttonText.text();
                 buttonText.text("HOME");
                 buttonText.fadeIn("slow");
-
                 if (buttonId.localeCompare('right-button') === 0) {
-                    $('#' + buttonId).css({ top: '10%' });
+                    $('#' + buttonId).css({ top: '11%' });
                 }
-        
-            } 
-            
+            }
             else {
                 console.log('error:', '#' + (button.id).split('-')[0] );
             }
@@ -334,14 +326,7 @@ layout: none
             directions = getDirections(inSlide, outSlide);
             inDirection = directions[0]
             outDirection = directions[1]
-
-            // console.log('out:', outSlide, outDirection, 'in:', inSlide, inDirection );
             transitionSlides(outSlide, outDirection, inSlide, inDirection);
-
-
-
-            // button.fir
-            // transitionSlides(outSlide, outDirection, inSlide, inDirection);
     });
   }
     
