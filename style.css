@@ -249,13 +249,7 @@ p {
     width: fit-content;
 
 }
-/* div {
-    border: 1px solid red;
-} */
-/* .event {
-    display: block;
-    position: relative;
-} */
+
 label {
     display: block;
     font-size: 46px;
@@ -264,30 +258,21 @@ label {
     font-weight: lighter;
 }
 
-/* #show-body  {
-    position: relative;
-    width: 85%;
-    height: 80%;
-    overflow-y: scroll;
-    z-index: 3;
-    margin-left: auto;
-    margin-right: auto;
-    -ms-overflow-style: none;
-} */
-
 
 #book-body {
     position: relative;
     width:75%;
-    height: 70%;
+    height: 65%;
     overflow-y: scroll;
     z-index: 3;
     margin-left:auto;
     margin-right:auto;
     -ms-overflow-style: none;
-    /* border: 1px solid red; */
 }
 
+#book-body::-webkit-scrollbar {
+    display: none;
+  }
 #book-header {
     position: relative;
     width:75%;
