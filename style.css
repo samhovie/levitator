@@ -264,16 +264,28 @@ label {
     font-weight: lighter;
 }
 
-
+/* #show-body  {
+    position: relative;
+    width: 85%;
+    height: 80%;
+    overflow-y: scroll;
+    z-index: 3;
+    margin-left: auto;
+    margin-right: auto;
+    -ms-overflow-style: none;
+} */
 
 
 #book-body {
     position: relative;
     width:75%;
     height: 70%;
+    overflow-y: scroll;
     z-index: 3;
     margin-left:auto;
     margin-right:auto;
+    -ms-overflow-style: none;
+    /* border: 1px solid red; */
 }
 
 #book-header {
