@@ -1,0 +1,17 @@
+<div class ='body' id ='show-body' class='example'>
+    <br>
+
+    {% capture nowunix %}{{'now' | date: '%s'}}{% endcapture %}
+    {% for show in site.data.shows %}
+
+{% capture posttime %}{{show.date | date: '%s'}}{% endcapture %}
+{% if posttime > nowunix %}
+    <p class ="event ">{{ show.venue }}</p> <br>
+            <p class="event ">{{ show.date | date: "%b %d, %Y" }}</p>  <br>
+            <p class="event ">{{ show.time }}</p>  <br>
+            <br>
+            <br>
+            <br>
+            {% endif %}
+    {% endfor %}
+</div>
