@@ -314,7 +314,7 @@ const body = document.querySelectorAll('.body');
 
 
 // })
-const scrollHeight = el[0].offsetHeight * past.length ;
+const scrollHeight = el[0].offsetHeight * (past.length -1) - 30 ;
 
 $("#past_button").on('click', function() {
         $("#show-body").animate({
