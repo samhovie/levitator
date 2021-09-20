@@ -352,6 +352,10 @@ input  {
       font-weight:lighter;
   }
 
+  #past-container {
+      display: none;
+  }
+
 
 
  #book-submit {
@@ -373,7 +377,9 @@ input  {
       /* margin-left: 10px; */
 
   }
-
+#future_button {
+    text-decoration: underline;
+}
   #email-link {
       font-size: 48px;
       width: fit-content;

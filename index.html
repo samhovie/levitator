@@ -302,55 +302,20 @@ layout: none
 
 
 <script>
-
-const el = document.querySelectorAll('.future');
-const past = document.querySelectorAll('.past');
-const body = document.querySelectorAll('.body');
-// const pbutton = document.querySelector('.past_button');
-
-// pbutton.addEventListener("click", function(){ 
-//     // body[0].scrollTop = 0;
-//     $("html, body, show-body").animate({ scrollTop: "0" });
-
-
-// })
-const scrollHeight = el[0].offsetHeight * (past.length -1) - 30 ;
-
+    
 $("#past_button").on('click', function() {
-        $("#show-body").animate({
-            scrollTop: 0
-        }, 1000);
-
-        // $(this).css({"text-decoration":"underline"});
-
-
+        $("#future-container").fadeOut(1000);
+        $("#past-container").fadeIn(1000);
+        $("#past_button").css({"text-decoration": "underline"});
+        $("#future_button").css({"text-decoration": "none"});
     });
 
     $("#future_button").on('click', function() {
-        $("#show-body").animate({
-            scrollTop: scrollHeight
-        }, 1000);
-
-        // $(this).css({"text-decoration":"underline"});
-
+        $("#past-container").fadeOut(1000);
+        $("#future-container").fadeIn(1000);
+        $("#past_button").css({"text-decoration": "none"});
+        $("#future_button").css({"text-decoration": "underline"});
 
     });
-
-
-// get scroll position in px
-// console.log(el[0].scrollLeft, el[0].scrollTop);
-// el[0].scrollTop = 50;
-// while (el[0].scrollTop != 50) {
-    // console.log (past)
-    // console.log(el)
-    body[0].scrollTop = scrollHeight;
-// }
-
-// console.log(body)
-// body[0].addEventListener("scroll", function(){
-//     // console.log(el.scrollTop)
-//     // console.log(body[0].scrollTop)
-//     // console.log(el)
-//     // console.log(body)
-// });
+   
 </script>
