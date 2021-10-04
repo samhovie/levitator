@@ -55,5 +55,26 @@ plugins:
 #   - vendor/ruby/
 
 
-imagesurl: "/cowboykilers/img/"
-thumbsurl: "/thumbs/"
+imagesurl: "/cowboykilers/images/show/img/"
+thumbsurl: "/images/show/thumbs/"
+
+
+# Custom Collections
+collections:
+  products:
+    output: true
+
+# Collection Defaults
+defaults:
+- scope:
+    type: posts
+  values:
+    layout: post
+- scope:
+    type: pages
+  values:
+    layout: page
+- scope:
+    type: products
+  values:
+    layout: product

@@ -12,13 +12,23 @@ layout: none
     
     <link rel="stylesheet" href="./style.css">
 
+    <script src="./simpleCart.js"></script>
+<!-- 
+    <meta http-equiv="Content-Security-Policy" content="default-src * self blob: data: gap:; base-uri 'unsafe-hashes'; style-src * self 'unsafe-inline' blob: data: gap:; script-src * 'self' 'unsafe-eval' 'unsafe-inline' blob: data: gap:; object-src * 'self' blob: data: gap:; img-src * self 'unsafe-inline' blob: data: gap:; connect-src self * 'unsafe-inline' blob: data: gap:; frame-src * self blob: data: gap:;"> -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src *;
+   img-src * 'self' data: https:; script-src 'self' 'unsafe-inline' 'unsafe-eval' *;
+   style-src  'self' 'unsafe-inline' *"> -->
 
-
+   <!-- <meta http-equiv="Content-Security-Policy" content="connect-src https://*.paypal.com"> -->
     <!-- <link rel="stylesheet" href="./style.css"> -->
 
     
+    <script
+    src="https://www.paypal.com/sdk/js?client-id=AblVLVCbzpVwjCmbv5nTaxT_6z3Ot0kBirLZow6rqTxHOZ8BXt3PlEwkHd-Klx0Hzd8VRIJrLv8e304r"> // Required. Replace YOUR_CLIENT_ID with your sandbox client ID.
+  </script>
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r126/three.min.js" integrity="sha512-n8IpKWzDnBOcBhRlHirMZOUvEq2bLRMuJGjuVqbzUJwtTsgwOgK5aS0c1JA647XWYfqvXve8k3PtZdzpipFjgg==" crossorigin="anonymous"></script>
+
     <script src="https://unpkg.com/three@0.126.0/examples/js/loaders/GLTFLoader.js"></script>
     <script type="module" src="OrbitControls.js"></script>
     
@@ -29,23 +39,28 @@ layout: none
   </head>
   
   <div class="containerz">
-      <!-- <button class="nav-button" id="top-button"><text class = 'nav-button-text' id = "top-button-text" >MERCH</text></button> -->
+      <!-- <button class="nav-button" id="top-button"><text class = 'nav-button-text' id = "top-button-text" >MERCH</text></button>
+      <button class="nav-button" id="left-button"><text class = 'nav-button-text' id = "left-button-text" >SHOWS</text></button>
+      <button class="nav-button" id="bottom-button"><text class = 'nav-button-text' id = "bottom-button-text" >INQUIRIES</text></button>
+      <button class="nav-button" id="right-button"><text class = 'nav-button-text' id = "right-button-text" >PRESS</text></button> -->
+
+      <div id = "home" class="page page-0">
+             <h1 id='home-title'>LEVITATOR</h1>
+             <button class="nav-button" id="top-button"><text class = 'nav-button-text' id = "top-button-text" >MERCH</text></button>
       <button class="nav-button" id="left-button"><text class = 'nav-button-text' id = "left-button-text" >SHOWS</text></button>
       <button class="nav-button" id="bottom-button"><text class = 'nav-button-text' id = "bottom-button-text" >INQUIRIES</text></button>
       <button class="nav-button" id="right-button"><text class = 'nav-button-text' id = "right-button-text" >PRESS</text></button>
 
-      <div id = "home" class="page page-0">
-             <h1 id='home-title'>LEVITATOR</h1>
       </div>
 
       <div id = "left" class="page page-1 o0">
           <div class="container" id="show-container">
+            <div class="home">
+                <button class ='home-button left' id ='home-left' style="border: none;"><img  class = 'icon' src="https://icongr.am/clarity/home.svg?size=64&color=currentColor"/></button>
+
+            </div>
           <div class="header" id="show-header">
               <h2 class = "title" id = 'show-title'>Live Shows</h2>
-
-                  <!-- <div></div> -->
-                  <!-- <br>
-                 -->
                  <div class = "button_container">
                 <button class="page_button" id ='future_button'type="button">UPCOMING </button><span class = 'bar'> &#124; </span>
                 <button class="page_button" id ='past_button'type="button">PREVIOUS</button>
@@ -65,7 +80,13 @@ layout: none
         </div>
     </div>
     <div id = "bottom" class="page page-1 o0">
-        <div class='' id="book-header">
+
+        <div class="home " style="z-index: 4;">
+            <button class ='home-button bottom' id ='' style="border: none;"><img  class = 'icon' src="https://icongr.am/clarity/home.svg?size=64&color=currentColor"/></button>
+
+        </div>
+
+        <div class='header' id="book-header">
             <h2 class = 'title' id = 'book-title'>Inquiries</h2>
         </div>
 
@@ -89,12 +110,18 @@ layout: none
         </div>
     </div>
     <div  id = "right" class="page page-1 o0">
+
+        <div class="home ">
+            <button class ='home-button right' id ='' style="border: none;"><img  class = 'icon' src="https://icongr.am/clarity/home.svg?size=64&color=currentColor"/></button>
+
+        </div>
+
         <div class = 'header' id="press-header">
             <h2 class ='title' id = 'press-title'>Press</h2>
         </div>
         <div class = 'body' id = 'press-body'>
             
-            {% include my-gallery.html folder="img" %}
+            {% include my-gallery.html folder="images/show/img" %}
 
 
     </div>
@@ -102,12 +129,44 @@ layout: none
     </div>
     <div id ="top" class ="page page-1 o0">
         <div class="container" id="merch-container">
+
+            <div class="cart">
+                <button id ='cart-button' style="border: none;"><img class = 'icon-flipped' src="https://icongr.am/clarity/shopping-cart.svg?size=64&color=currentColor"/></button>
+
+            </div>
+            <div class="home top">
+                <button class ='home-button top' id ='' style="border: none;"><img  class = 'icon' src="https://icongr.am/clarity/home.svg?size=64&color=currentColor"/></button>
+
+            </div>
+
             <div class ='header' id="merch-header">
                 <h2 class = 'title' id = 'merch-title'>Merch</h2>
+
             </div>
   
             <div class = 'body' id ='merch-body' >
 
+
+                {% include merch-list.html %}
+
+                {% include cart.html %}
+
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+
+                <div id="paypal-button-container"></div>
+
+                <input id ='test-element' ></input>
+
+                
 
 
               </div>
@@ -187,6 +246,8 @@ layout: none
         }
         return [inDirection, outDirection];
     }
+
+    
     let saveText = 'HOME'
     const buttons = document.getElementsByClassName("nav-button");
     for (const button of buttons) {
@@ -207,29 +268,29 @@ layout: none
                 // home is inslide
                 inSlide = '#home';
                 // hide button
-                $('#' + buttonId + "-text").hide()
-                $('#' + buttonId + "-text").text(saveText);
-                saveText = "HOME";
+                // $('#' + buttonId + "-text").hide()
+                // $('#' + buttonId + "-text").text(saveText);
+                // saveText = "HOME";
                 // show all buttons with correct names in place 
-                for (const button of buttons) { 
-                    $('#' + (button.id) + "-text").fadeIn()
-                }
+                // for (const button of buttons) { 
+                //     $('#' + (button.id) + "-text").fadeIn()
+                // }
 
-                if (buttonId.localeCompare('right-button') === 0) {
-                    $('#' + buttonId).css({ top: '50%' });
-                } 
-                else if (buttonId.localeCompare('left-button') === 0) {
-                    $('#' + buttonId).css({ marginTop: '-82px' });
-                }
-                else if (buttonId.localeCompare('top-button') === 0) {
-                    // $('#' + buttonId).css({ top: '11%' });
-                    $('#' + buttonId).css({ marginLeft: '-80px' });
-                }
-                else if (buttonId.localeCompare('bottom-button') === 0) {
-                    // $('#' + buttonId).css({ top: '11%' });
-                    $('#' + buttonId).css({ marginLeft: '-98px' });
+                // if (buttonId.localeCompare('right-button') === 0) {
+                //     $('#' + buttonId).css({ top: '50%' });
+                // } 
+                // else if (buttonId.localeCompare('left-button') === 0) {
+                //     $('#' + buttonId).css({ marginTop: '-82px' });
+                // }
+                // else if (buttonId.localeCompare('top-button') === 0) {
+                //     // $('#' + buttonId).css({ top: '11%' });
+                //     $('#' + buttonId).css({ marginLeft: '-80px' });
+                // }
+                // else if (buttonId.localeCompare('bottom-button') === 0) {
+                //     // $('#' + buttonId).css({ top: '11%' });
+                //     $('#' + buttonId).css({ marginLeft: '-98px' });
 
-                }
+                // }
 
 
             // if button page is hidden
@@ -239,33 +300,35 @@ layout: none
                 // butttonid is outslide
                 outSlide = '#home'
                 // hide all buttons 
-                for (const button of buttons) { 
-                    $('#' + (button.id) + "-text").hide()
-                }
+                // for (const button of buttons) { 
+                //     $('#' + (button.id) + "-text").hide()
+                // }
                 // show home button in place
-                let buttonText = $('#' + buttonId + "-text")
-                saveText = buttonText.text();
-                buttonText.text("HOME");
+                // let buttonText = $('#' + buttonId + "-text")
+                // saveText = buttonText.text();
+                // buttonText.text("HOME");
 
 
 
-                buttonText.fadeIn("slow");
-                if (buttonId.localeCompare('right-button') === 0) {
-                    $('#' + buttonId).css({ top: '11%' });
-                } 
-                else if (buttonId.localeCompare('left-button') === 0) {
-                    // $('#' + buttonId).css({ top: '11%' });
-                    $('#' + buttonId).css({ marginTop: '-69px' });
-                }
-                else if (buttonId.localeCompare('top-button') === 0) {
-                    // $('#' + buttonId).css({ top: '11%' });
-                    $('#' + buttonId).css({ marginLeft: '-68px' });
-                }
-                else if (buttonId.localeCompare('bottom-button') === 0) {
-                    // $('#' + buttonId).css({ top: '11%' });
-                    $('#' + buttonId).css({ marginLeft: '-58px' });
+                // buttonText.fadeIn("slow");
 
-                }
+
+                // if (buttonId.localeCompare('right-button') === 0) {
+                //     $('#' + buttonId).css({ top: '11%' });
+                // } 
+                // else if (buttonId.localeCompare('left-button') === 0) {
+                //     // $('#' + buttonId).css({ top: '11%' });
+                //     $('#' + buttonId).css({ marginTop: '-69px' });
+                // }
+                // else if (buttonId.localeCompare('top-button') === 0) {
+                //     // $('#' + buttonId).css({ top: '11%' });
+                //     $('#' + buttonId).css({ marginLeft: '-68px' });
+                // }
+                // else if (buttonId.localeCompare('bottom-button') === 0) {
+                //     // $('#' + buttonId).css({ top: '11%' });
+                //     $('#' + buttonId).css({ marginLeft: '-58px' });
+
+                // }
 
             }
             else {
@@ -321,5 +384,108 @@ $("#past_button").on('click', function() {
         $("#future_button").css({"text-decoration": "underline"});
 
     });
+
+
+    // for all home buttons, 
+        // get id
+
+    // $("#home-button").on('click', function() {  
+    //     const inSlide = '#home'
+    //     // let outSlide = 
+    //     // transitionSlides(outSlide, outDirection, inSlide, inDirection);
+    //     transitionSlides('#top', 'slideOutUp', '#home', 'slideInUp')
+    //     // #left slideOutLeft #home slideInRight
+    // '#top', 'slideOutUp', '#home', 'slideInUp')
+    
+
+
+        
+
+    // });
+
+
+    const homebuttons = document.getElementsByClassName("home-button");
+    const home = '#home';
+
+    for (const button of homebuttons) {
+        button.addEventListener('click', () => { 
+            const out = '#' + button.classList[1];
+            if (out.localeCompare('#top') === 0) {
+                transitionSlides('#top', 'slideOutUp', '#home', 'slideInUp')
+            }
+            else if (out.localeCompare('#left') === 0) {
+                transitionSlides('#left', 'slideOutLeft', '#home', 'slideInRight')
+            }
+            else if (out.localeCompare('#right') === 0) {
+                transitionSlides('#right', 'slideOutRight', '#home', 'slideInLeft')
+            }
+            else if (out.localeCompare('#bottom') === 0) {
+                transitionSlides('#bottom', 'slideOutDown', '#home', 'slideInDown')
+
+            } 
+            else {
+                console.log('error')
+            }
+        })
+    }
+
    
 </script>
+
+
+<!-- <script src="simpleCart.js" type="text/javascript"></script>
+ -->
+
+ <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/simplecartjs/3.0.5/simplecart.min.js" integrity="sha512-EOuiE1YuBkhsjVlAEjRmjJbQa2phU+9s0akQHiXOp5Zs/ye429onMubcIKvSnLjeqt+ttFEkPwQFrMzJ6bg5rA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+
+<script type="text/javascript">
+simpleCart({
+    checkout: { 
+        type: "PayPal" , 
+        email: "sb-4ila07861696@business.example.com" ,
+        // use paypal sandbox, default is false
+        sandbox: true ,
+        // http method for form, "POST" or "GET", default is "POST"
+        method: "GET"
+        // url to return to on successful checkout, default is null
+        // success: "./success.html" 
+        // url to return to on cancelled checkout, default is null
+        // cancel: "cancel.html" 
+    } 
+});
+
+
+</script>
+
+<!-- <script>
+    paypal.Buttons().render('#paypal-button-container');
+    // This function displays Smart Payment Buttons on your web page.
+  </script> -->
+
+  <script>
+
+// document.getElementById("grand-total").value = "25";
+
+let total = 0;
+simpleCart.ready(function(){
+simpleCart.empty();
+total = simpleCart.grandTotal();
+});
+
+
+
+
+    paypal.Buttons({
+      createOrder: function(data, actions) {
+        // This function sets up the details of the transaction, including the amount and line item details.
+        return actions.order.create({
+          purchase_units: [{
+            amount: {
+              value: total
+            }
+          }]
+        });
+      }
+    }).render('#paypal-button-container');
+
+  </script>
