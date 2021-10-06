@@ -1,67 +1,14 @@
 
 {% for product in site.products %}
-<div class="simpleCart_shelfItem item-card" >
-    <img src="{{ product.featured_image_path }}" itemprop="image">
-    
-<div style="display: flex; width: 100%; align-items: center; justify-content: center;">
-    <h4 style="width: 80%;" class="item_name">{{ product.title }} </h4>
-    <!-- <span>$</span> -->
-    <span  class="item_price">$ {{ product.price }}</span>
+<div class="simpleCart_shelfItem card  ">
+    <img class = 'card-img-top' src="{{ product.featured_image_path }}" itemprop="image">
+    <div class = 'card-body'  >
+        
+    <div class ='d-flex justify-content-around' style="padding-top: 12px;">
+        <p class="item_name card-text">{{ product.title }} </p>
+        <span  class="item_price">$ {{ product.price }}</span>
+    </div>
 </div>
-
-
-<div>
-    <!-- <p style="display: block;"> -->
-        <select class="item_size">
-            <option value="Small"> Small </option>
-            <option value="Medium"> Medium </option>
-            <option value="Large"> Large </option>
-        </select>
-
-        <input type="text" value="1" size = "1" class="item_Quantity">
-
-        <button class="product-button item_add" style="position: relative;">Add</button>
-
-    <!-- </p> -->
-</div>
-
-
 </div>
 {% endfor %}
 
-
-    <!-- <div class="simpleCart_shelfItem">
-        <h2 class="item_name"> Awesome T-shirt </h2>
-        <input type="text" value="1" class="item_Quantity">
-        <span class="item_price">$35.99</span>
-        <a class="item_add" href="javascript:;"> Add to Cart </a>
-    </div> -->
-
-
-            <!-- <section class="entry one-third styles simpleCart_shelfItem" itemscope itemtype="http://schema.org/Product">
-
-            <div class="style">
-                    <a>
-                    <img src="{{ product.featured_image_path }}" itemprop="image">
-                </a>
-            </div>
-
-        <div class="product-details">
-            <div class="product-title">
-                    <h4 class= 'item_name'>{{ product.title }}</h4>
-            </div>
-
-            <input type="text" value="1" class="item_Quantity"><br>
-
-            <div class="product-price item_price">
-                            <p>&#x24;{{ product.price }}</p>
-            </div>
-
-            <div class="product-button">
-                <button class="product-button item_add">Add</button>
-</div>
-
-
-                </div>
-
-        </section> -->
