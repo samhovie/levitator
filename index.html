@@ -9,6 +9,8 @@ layout: none
     <title>LEVITATOR</title>
 
     <link rel="stylesheet" href="./normalize.css">
+
+    <link rel="stylesheet" href="./bootstrap.min.css">
     
     <link rel="stylesheet" href="./style.css">
 
@@ -130,17 +132,29 @@ layout: none
     <div id ="top" class ="page page-1 o0">
         <div class="container" id="merch-container">
 
-            <div class="cart">
+            <!-- <div class="cart">
                 <button id ='cart-button' style="border: none;"><img class = 'icon-flipped' src="https://icongr.am/clarity/shopping-cart.svg?size=64&color=currentColor"/></button>
 
             </div>
             <div class="home top">
                 <button class ='home-button top' id ='' style="border: none;"><img  class = 'icon' src="https://icongr.am/clarity/home.svg?size=64&color=currentColor"/></button>
 
-            </div>
+            </div> -->
 
             <div class ='header' id="merch-header">
+
+                <!-- <div class="cart"> -->
+                    <button class ='cart-button' style="border: none;"><img class = '' src="https://icongr.am/clarity/shopping-cart.svg?size=64&color=currentColor"/></button>
+    
+                <!-- </div> -->
+                <button class ='home-button ' id ='' style="border: none;"><img  class = '' src="https://icongr.am/clarity/home.svg?size=64&color=currentColor"/></button>
+
                 <h2 class = 'title' id = 'merch-title'>Merch</h2>
+
+                <!-- <div class="home"> -->
+
+    
+                <!-- </div> -->
 
             </div>
   
@@ -149,7 +163,7 @@ layout: none
 
                 {% include merch-list.html %}
 
-                {% include cart.html %}
+        {% include cart.html %}
 
                 <br>
                 <br>
@@ -164,7 +178,7 @@ layout: none
 
                 <div id="paypal-button-container"></div>
 
-                <input id ='test-element' ></input>
+                <!-- <input id ='test-element' ></input> -->
 
                 
 
@@ -439,21 +453,78 @@ $("#past_button").on('click', function() {
  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/simplecartjs/3.0.5/simplecart.min.js" integrity="sha512-EOuiE1YuBkhsjVlAEjRmjJbQa2phU+9s0akQHiXOp5Zs/ye429onMubcIKvSnLjeqt+ttFEkPwQFrMzJ6bg5rA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
 
 <script type="text/javascript">
+// simpleCart({
+//     checkout: { 
+//         type: "PayPal" , 
+//         email: "sb-4ila07861696@business.example.com" ,
+//         // use paypal sandbox, default is false
+//         sandbox: true ,
+
+//         cartStyle: "table",
+//         // http method for form, "POST" or "GET", default is "POST"
+
+//         cartColumns: [
+//     { attr: "name" , label: "Name" } ,
+//     { attr: "price" , label: "Price", view: 'currency' } ,
+//     { attr: "size" , label: "Size" } ,
+//     { attr: "color" , label: "Color" } ,
+//     { view: "decrement" , label: false , text: "- 1" } ,
+//     { attr: "quantity" , label: "Qty" } ,
+//     { view: "increment" , label: false , text: "+ 1" } ,
+//     { attr: "total" , label: "SubTotal", view: 'currency' } ,
+//     { view: "remove" , text: "Remove" , label: false }
+//   ]
+    
+//         method: "GET"
+//         // url to return to on successful checkout, default is null
+//         // success: "./success.html" 
+//         // url to return to on cancelled checkout, default is null
+//         // cancel: "cancel.html" 
+//     } 
+// });
+
+
 simpleCart({
-    checkout: { 
-        type: "PayPal" , 
-        email: "sb-4ila07861696@business.example.com" ,
-        // use paypal sandbox, default is false
-        sandbox: true ,
-        // http method for form, "POST" or "GET", default is "POST"
-        method: "GET"
-        // url to return to on successful checkout, default is null
-        // success: "./success.html" 
-        // url to return to on cancelled checkout, default is null
-        // cancel: "cancel.html" 
-    } 
+
+checkout: {
+  type: "PayPal",
+  email: "sb-4ila07861696@business.example.com" ,
+  sandbox: true
+},
+
+// tax: 0.075,
+// currency: "THB",
+
+cartStyle: "table",
+
+cartColumns: [
+  { attr: "name" , label: "Name" } ,
+  { attr: "price" , label: "Price", view: 'currency' } ,
+  { attr: "size" , label: "Size" } ,
+//   { attr: "color" , label: "Color" } ,
+  { view: "decrement" , label: false , text: "- 1" } ,
+  { attr: "quantity" , label: "Qty" } ,
+  { view: "increment" , label: false , text: "+ 1" } ,
+  { attr: "total" , label: "SubTotal", view: 'currency' } ,
+  { view: "remove" , text: "Remove" , label: false }
+]
+
 });
 
+// simpleCart.currency({
+// code: "THB",
+// name: "Thai Baht",
+// symbol: "&#3647;",
+// delimiter: " ",
+// decimal: ",",
+// after: true,
+// accuracy: 0
+// });
+
+//* Refresh cart once simpleCart is ready to listen.
+simpleCart.ready(function() {
+simpleCart.update();
+});
 
 </script>
 
