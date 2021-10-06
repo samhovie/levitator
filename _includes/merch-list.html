@@ -1,13 +1,44 @@
 
+<div style="height: 80px;"></div>
+
 {% for product in site.products %}
-<div class="simpleCart_shelfItem card  ">
+
+<div class="simpleCart_shelfItem card  " >
     <img class = 'card-img-top' src="{{ product.featured_image_path }}" itemprop="image">
+
     <div class = 'card-body'  >
         
-    <div class ='d-flex justify-content-around' style="padding-top: 12px;">
+    <div class ='d-flex justify-content-around' style="padding-top: 26px; padding-bottom: 16px;">
         <p class="item_name card-text">{{ product.title }} </p>
         <span  class="item_price">$ {{ product.price }}</span>
     </div>
+
+    <div class="d-flex justify-content-around ">
+
+    <div style="height: 90px; width: 130px; margin-right: 15px;" >
+    <div class="dropdown " >
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+          Size
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <li><a class="dropdown-item" href="#">Small</a></li>
+          <li><a class="dropdown-item" href="#">Medium</a></li>
+          <li><a class="dropdown-item" href="#">X-Large</a></li>
+          <li><a class="dropdown-item" href="#">XX-Large</a></li>
+        </ul>
+      </div>
+    </div>
+
+      <div style="width: 210px; height: 90px; margin-left: 20px; padding-bottom: 32px;">
+      <button  type="button" class="btn btn-primary add-cart">Add to Cart</button>
+</div>
+
+    </div>
+
+
+
+
+
 </div>
 </div>
 {% endfor %}

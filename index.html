@@ -13,16 +13,12 @@ layout: none
     <link rel="stylesheet" href="./bootstrap.min.css">
     
     <link rel="stylesheet" href="./style.css">
-
+    <!-- <script src="https://unpkg.com/@popperjs/core@2"></script>
+     -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js" integrity="sha512-2rNj2KJ+D8s1ceNasTIex6z4HWyOnEYLVC3FigGOmyQCZc2eBXKgOxQmo3oKLHyfcj53uz4QMsRCWNbLd32Q1g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./bootstrap.min.js"></script>
     <script src="./simpleCart.js"></script>
-<!-- 
-    <meta http-equiv="Content-Security-Policy" content="default-src * self blob: data: gap:; base-uri 'unsafe-hashes'; style-src * self 'unsafe-inline' blob: data: gap:; script-src * 'self' 'unsafe-eval' 'unsafe-inline' blob: data: gap:; object-src * 'self' blob: data: gap:; img-src * self 'unsafe-inline' blob: data: gap:; connect-src self * 'unsafe-inline' blob: data: gap:; frame-src * self blob: data: gap:;"> -->
-    <!-- <meta http-equiv="Content-Security-Policy" content="default-src *;
-   img-src * 'self' data: https:; script-src 'self' 'unsafe-inline' 'unsafe-eval' *;
-   style-src  'self' 'unsafe-inline' *"> -->
 
-   <!-- <meta http-equiv="Content-Security-Policy" content="connect-src https://*.paypal.com"> -->
-    <!-- <link rel="stylesheet" href="./style.css"> -->
 
     
     <script
@@ -492,6 +488,17 @@ cartColumns: [
 //* Refresh cart once simpleCart is ready to listen.
 simpleCart.ready(function() {
 simpleCart.update();
+});
+
+$(function(){
+
+$(".dropdown-menu li a").click(function(){
+
+  $(".btn:first-child").text($(this).text());
+  $(".btn:first-child").val($(this).text());
+
+});
+
 });
 
 </script>
