@@ -1,12 +1,13 @@
 ---
-title: Scar the Lion
+title: Levitator Tee
 description:
-price: '4.00'
+price: '20.00'
 sizes:
   - Small
   - Medium
   - Large
-  - XL
+  - X-Large
+  - XX-Large
 styles:
   - name: Blue
     color: '#39589e'

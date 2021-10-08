@@ -128,11 +128,37 @@ layout: none
     <div id ="top" class ="page page-1 o0">
         <div class="container" id="merch-container">
 
+            <!-- style="display: none" -->
+
+            <div id="checkout-cart"  class="fourty "  >
+
+                <!-- <button  id ='' style="border: none;"><img  class = '' src="https://icongr.am/clarity/times.svg?size=64&color=currentColor"/></button> -->
+
+
+                <button id="close" type="button" class="close-button btn btn-default" >
+                    <img class = '' src="https://icongr.am/clarity/times.svg?size=80&color=currentColor"/>
+                  </button>
+                
+                <div class=" fourty simplecart-cart">
+                  <div class="fourty simpleCart_items"></div>
+                  <div class=" fourty simplecart-total">
+                    <p>Total: </p><span class="simpleCart_quantity"></span> items - <span class="simpleCart_total"></span>
+                  </div>
+                  <!-- <a id ='checkout' type="button" class="btn btn-dark w-100"  >Checkout</a> -->
+                  <br>
+                  <div id="paypal-button-container"></div>
+                </div>
+                <!-- <button type="button" class="btn btn-dark">Checkout</button> -->
+
+                
+            
+              </div>
+
                 <div class ='header' >
 
                     <!-- <button type="button" class ='cart-button' style="border: none; " data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Bottom popover" ><img class = '' src="https://icongr.am/clarity/shopping-cart.svg?size=64&color=currentColor"/></button> -->
 <!-- 
-                    <button type="button" class ='cart-button btn btn-default' style="border: none; " data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Bottom popover" >Butt</button> -->
+                    <button type="button" class ='cart-button btn btn-default' style="border: none; " data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Bottom popover" ></button> -->
 
                     <button id="cart" type="button" class="cart-button btn btn-default" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom"  data-bs-offset="-100, 20">
                         <img class = '' src="https://icongr.am/clarity/shopping-cart.svg?size=64&color=currentColor"/>
@@ -586,7 +612,7 @@ var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
     // This function displays Smart Payment Buttons on your web page.
   </script> -->
 
-  <!-- <script>
+  <script>
 
 // document.getElementById("grand-total").value = "25";
 
@@ -612,4 +638,4 @@ total = simpleCart.grandTotal();
       }
     }).render('#paypal-button-container');
 
-  </script> -->
+  </script>
