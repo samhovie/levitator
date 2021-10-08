@@ -588,6 +588,20 @@ input  {
       font-size: 36px !important;
   }
 
+  /* .popover-body {
+      font-size: 40px !important;
+      width: 400px !important;
+  } */
+
+  .tooltip {
+      font-size: 32px !important;
+      max-width: 100%;
+    }
+
+  .popover{
+    font-size: 40px;
+    max-width: 100%; /* Max Width of the popover (depending on the container!) */
+}
   /* div {
       border: 1px solid red;
   } */

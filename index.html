@@ -130,7 +130,13 @@ layout: none
 
                 <div class ='header' >
 
-                    <button class ='cart-button' style="border: none;"><img class = '' src="https://icongr.am/clarity/shopping-cart.svg?size=64&color=currentColor"/></button>
+                    <!-- <button type="button" class ='cart-button' style="border: none; " data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Bottom popover" ><img class = '' src="https://icongr.am/clarity/shopping-cart.svg?size=64&color=currentColor"/></button> -->
+<!-- 
+                    <button type="button" class ='cart-button btn btn-default' style="border: none; " data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Bottom popover" >Butt</button> -->
+
+                    <button id="cart" type="button" class="cart-button btn btn-default" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom"  data-bs-offset="-100, 20">
+                        <img class = '' src="https://icongr.am/clarity/shopping-cart.svg?size=64&color=currentColor"/>
+                      </button>
     
                 <button class ='home-button ' id ='' style="border: none;"><img  class = '' src="https://icongr.am/clarity/home.svg?size=64&color=currentColor"/></button>
 
@@ -145,7 +151,7 @@ layout: none
 
                 {% include merch-list.html %}
 
-
+                {% include cart.html %}
 
               </div>
           </div>
@@ -475,16 +481,6 @@ cartColumns: [
 
 });
 
-// simpleCart.currency({
-// code: "THB",
-// name: "Thai Baht",
-// symbol: "&#3647;",
-// delimiter: " ",
-// decimal: ",",
-// after: true,
-// accuracy: 0
-// });
-
 //* Refresh cart once simpleCart is ready to listen.
 simpleCart.ready(function() {
 simpleCart.update();
@@ -492,16 +488,98 @@ simpleCart.update();
 
 $(function(){
 
-$(".dropdown-menu li a").click(function(){
+// $(".dropdown-menu li a").click(function(){
+    $(".dropdown-toggle li a").click(function(){
 
-  $(".btn:first-child").text($(this).text());
-  $(".btn:first-child").val($(this).text());
+  $("#target:second-child").text($(this).text());
+  $("#target:second-child").val($(this).text());
 
 });
 
 });
+
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip({trigger: 'manual', placement: 'bottom'})
+})
+
+$("#add-button").click(function(){ 
+
+    $("#cart").popover('show')
+
+    setTimeout(function() {
+    
+        $("#cart").popover('hide')
+
+
+    }, 5000);
+
+})
+
+//     // console.log('alser')
+//     // $("#size-select").
+//     let option = $('#size-select').val();
+//     // console.log(option)
+//     if (option.localeCompare('none') === 0 ){
+//         // console.log('noneh')
+
+//         // const element = document.querySelector('#merch-title ');
+//         // element.classList.add('animate__animated', 'animate__bounce');
+
+//         // animateCSS('.card', 'shakeX');
+//         // console.log('chekc')
+//         // alert('choose size')
+
+//         $('#size-select').tooltip('show');
+
+//         $('#size-select').on({ 'mouseenter': function() {
+//         $(this).tooltip('hide');
+//         }
+//     })
+
+
+//     } else {
+//         console.log(option)
+//     }
+
+
+// });
+
+var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+  return new bootstrap.Popover(popoverTriggerEl, { 
+    html : true,
+    content: function() {
+      return $('#popover_content_wrapper').html();
+    }
+  } )
+})
+
+
+// $(document).ready(function(){
+//   $('.danger').popover({ 
+//     html : true,
+//     content: function() {
+//       return $('#popover_content_wrapper').html();
+//     }
+//   });
+// });
+
+
+// var popover = new bootstrap.Popover(document.querySelector('.popover'), {
+//   container: 'body'
+// })
+
+// $(function () {
+//   $('[data-bs-toggle="popover"]').popover({ html : true})
+// })
+
+// simpleCart.ready(function(){
+//     simpleCart.empty(); 
+// })
 
 </script>
+
+
 
 <!-- <script>
     paypal.Buttons().render('#paypal-button-container');

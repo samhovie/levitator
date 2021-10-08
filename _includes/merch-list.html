@@ -6,38 +6,53 @@
 <div class="simpleCart_shelfItem card  " >
     <img class = 'card-img-top' src="{{ product.featured_image_path }}" itemprop="image">
 
-    <div class = 'card-body'  >
+    <div class = 'card-body' style="padding: 40px 64px;" >
         
-    <div class ='d-flex justify-content-around' style="padding-top: 26px; padding-bottom: 16px;">
+        <div class ='d-flex justify-content-between' >
         <p class="item_name card-text">{{ product.title }} </p>
         <span  class="item_price">$ {{ product.price }}</span>
     </div>
 
-    <div class="d-flex justify-content-around ">
+    <div class="d-flex justify-content-between ">
 
-    <div style="height: 90px; width: 130px; margin-right: 15px;" >
-    <div class="dropdown " >
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+    <div style="height: 70px; width: fit-content; " >
+        <!-- <p class="margin-bottom-0">Size:</p> -->
+        <select  data-toggle="tooltip" data-placement="bottom" title="choose size" id='size-select' class="item_size btn btn-secondary h-90 w-100 form-select-sm" style="font-size: 40px;">
+            <!-- <option value="none"> Size </option> -->
+          {% for size in product.sizes %}
+            <option value="{{ size }}"> {{ size }} </option>
+          {% endfor %}
+        </select>
+
+    <!-- <div class="dropdown item_size" >
+        <button id ='target' class="btn btn-secondary dropdown-toggle " type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
           Size
         </button>
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-          <li><a class="dropdown-item" href="#">Small</a></li>
-          <li><a class="dropdown-item" href="#">Medium</a></li>
-          <li><a class="dropdown-item" href="#">X-Large</a></li>
-          <li><a class="dropdown-item" href="#">XX-Large</a></li>
+        <ul id ='drmenu' class="dropdown-menu  " aria-labelledby="dropdownMenuButton1">
+          <li><a value='Small' class="dropdown-item " href="#">Small</a></li>
+          <li><a value='Medium' class="dropdown-item" href="#">Medium</a></li>
+          <li><a value='Large' class="dropdown-item" href="#">Large</a></li>
+          <li><a value='X-Large' class="dropdown-item" href="#">X-Large</a></li>
+          <li><a value='XX-Large' class="dropdown-item" href="#">XX-Large</a></li>
         </ul>
-      </div>
+      </div> -->
+
+      <!-- <div class="dropdown">
+        <a id ='target' href="#" class="dropdown-toggle btn btn-secondary " data-bs-toggle="dropdown">Dropdown</a>
+
+        <div class="dropdown-menu">
+            <a href="#" class="dropdown-item">Action</a>
+            <a href="#" class="dropdown-item">Another action</a>
+        </div>
+    </div> -->
+
     </div>
 
-      <div style="width: 210px; height: 90px; margin-left: 20px; padding-bottom: 32px;">
-      <button  type="button" class="btn btn-primary add-cart">Add to Cart</button>
+           <div style="width: 204px; height: 70px; ">
+      <button id='add-button' type="button" class="btn btn-primary add-cart item_add ">Add to Cart</button>
 </div>
 
     </div>
-
-
-
-
 
 </div>
 </div>
