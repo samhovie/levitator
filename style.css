@@ -114,37 +114,69 @@ button {
 
   }
   .simplecart-cart {
-      padding: 10px 50px 100px;
+      /* padding: 10px 50px 100px; */
       /* margin-top: 20px; */
       position: relative;
   }
 
-  .close-button {
-      padding: 20px;
-      margin: 20px;
-      margin-bottom: 0px;
-      margin-top: 30px;
+  #close-button {
+      padding: 50px 0px;
+      margin: 0px;
+      /* margin: 30px; */
+      /* margin-bottom: 0px; */
+      /* margin-top: 30px; */
       /* margin-bottom: 30px;
       margin-top: 30px; */
       position: relative;
   }
 
   #paypal-button-container {
-      margin-top: 50px;
-      width: 100%;
-  }
-
-  #checkout-cart {
-      /* padding: 50px; */
-      position: absolute;
-      z-index: 4;
-      width: 97%;
-      height: fit-content;
-      top: 25%;
+      /* margin-top: 50px; */
+      min-width: 700px;
+      /* width: fit-content; */
       margin-left: auto;
       margin-right: auto;
+
+  }
+
+  /* .paypal-buttons {
+      /* max-width: 900px !important; */
+            /* margin-left: auto;
+            margin-right: auto; */
+
+    /* } */
+
+    
+
+  #checkout-cart {
+      display: none;
+      /* padding: 100px; */
+      position: absolute;
+      z-index: 4;
+      width: 90%;
+      height: fit-content;
+      top: 15%;
+      margin-left: auto;
+      margin-right: auto;
+      left: 0;
+right: 0;
       /* margin-bottom: 20%; */
-      background-color: darkgrey;
+      /* background-color: darkgrey;
+       */
+       background-color: #979797;
+       /* border: 1px solid black; */
+       border-radius: 5px;
+  }
+
+  #checkout-cart-inner {
+
+    width: 725px;
+    /* padding: 20px; */
+    margin: 30px auto 150px;
+    /* margin-right: auto; */
+    /* margin-left: auto; */
+    
+
   }
   .bar {
     font-weight: lighter;
@@ -185,8 +217,8 @@ button {
     border-radius: 10px 10px 0px 0px !important;
   }
 
-
-  /* div {
+/* 
+  div {
       border: 1px solid red;
   } */
   #checkout {
@@ -195,6 +227,7 @@ button {
       padding: 10px;
       margin-top: 20px;
       margin-bottom: 10px;
+      z-index: 5;
   }
   .home-button {
       left: 10%;
@@ -828,14 +861,17 @@ input  {
     display: grid;
     grid-template-columns: repeat(auto-fill,minmax(200px, 1fr));
     justify-content: center;
-    padding: 4px;
+    padding: 1px;
   }
 
+  /* div {
+      border: 1px solid red;
+  } */
   .box {
       flex-basis: 25%;
       width: 100%;
-      padding: 10px;
-      margin: 2px;
+      padding: 4px;
+      margin: 1px;
   }
 
   .img-gallery {

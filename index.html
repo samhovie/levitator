@@ -135,19 +135,25 @@ layout: none
                 <!-- <button  id ='' style="border: none;"><img  class = '' src="https://icongr.am/clarity/times.svg?size=64&color=currentColor"/></button> -->
 
 
-                <button id="close" type="button" class="close-button btn btn-default" >
-                    <img class = '' src="https://icongr.am/clarity/times.svg?size=80&color=currentColor"/>
-                  </button>
+
                 
-                <div class=" fourty simplecart-cart">
+                <div id="checkout-cart-inner" class=" fourty simplecart-cart">
+
+                    <button id="close-button" type="button" class=" btn btn-default" >
+                        <img class = '' src="https://icongr.am/clarity/times.svg?size=80&color=currentColor"/>
+                      </button>
+                      
+                  <div style="margin: 0px 10px 0px;">
                   <div class="fourty simpleCart_items"></div>
                   <div class=" fourty simplecart-total">
                     <p>Total: </p><span class="simpleCart_quantity"></span> items - <span class="simpleCart_total"></span>
                   </div>
                   <!-- <a id ='checkout' type="button" class="btn btn-dark w-100"  >Checkout</a> -->
                   <br>
-                  <div id="paypal-button-container"></div>
+                  <div class="d-flex justify-content-center" id="paypal-button-container"></div>
                 </div>
+
+            </div>    
                 <!-- <button type="button" class="btn btn-dark">Checkout</button> -->
 
                 
@@ -395,6 +401,36 @@ $("#past_button").on('click', function() {
 
     });
 
+    $("#close-button").on('click', function() {
+        $("#checkout-cart").hide();
+     })
+
+    //  $("#checkout").on('click', function() {
+    //      console.log('check')
+    //     $("#checkout-cart").show();
+    //  })
+//     $( "#checkout" ).click(function() {
+//         $("#checkout-cart").show();
+// });
+$(document).on("click", "#checkout", function() {
+    // alert('it works!');
+    $("#checkout-cart").show();
+    $("#cart").popover('hide')
+
+});
+
+$("#cart").on('click', function() {
+
+// $("#cart").popover('show');
+
+
+if($("#checkout-cart").is(":visible")) {
+    $("#checkout-cart").hide();
+} else {
+    $("#cart").popover('show');
+}
+
+})
 
     // for all home buttons, 
         // get id
@@ -574,6 +610,7 @@ var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggl
 var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
   return new bootstrap.Popover(popoverTriggerEl, { 
     html : true,
+    trigger: 'manual',
     content: function() {
       return $('#popover_content_wrapper').html();
     }

@@ -20,7 +20,14 @@
         <select  data-toggle="tooltip" data-placement="bottom" title="choose size" id='size-select' class="item_size btn btn-secondary h-100 w-100 form-select-sm" style="font-size: 40px;">
             <!-- <option value="none"> Size </option> -->
           {% for size in product.sizes %}
-            <option value="{{ size }}"> {{ size }} </option>
+          
+          {% if size | slice: 0 == 'X' %}
+          {% assign short_size =  size | split: "-" | first | append: "L" %}
+          {% else %}
+          {% assign short_size =  size | slice: 0 %}
+          {% endif %}
+
+            <option value="{{ short_size }}"> {{ size }} </option>
           {% endfor %}
         </select>
 
