@@ -44,7 +44,7 @@ layout: none
 
       <div id = "home" class="page page-0">
              <h1 id='home-title'>LEVITATOR</h1>
-             <button class="nav-button" id="top-button"><text class = 'nav-button-text' id = "top-button-text" >MERCH</text></button>
+             <!-- <button class="nav-button" id="top-button"><text class = 'nav-button-text' id = "top-button-text" >MERCH</text></button> -->
       <button class="nav-button" id="left-button"><text class = 'nav-button-text' id = "left-button-text" >SHOWS</text></button>
       <button class="nav-button" id="bottom-button"><text class = 'nav-button-text' id = "bottom-button-text" >INQUIRIES</text></button>
       <button class="nav-button" id="right-button"><text class = 'nav-button-text' id = "right-button-text" >PRESS</text></button>
@@ -529,19 +529,25 @@ checkout: {
 
 cartStyle: "table",
 
+// icons not text 
+// blur background
+// click cart to close popover
+
 cartColumns: [
   { attr: "name" , label: "Name" } ,
-  { attr: "price" , label: "Price", view: 'currency' } ,
+//   { attr: "price" , label: "Price", view: 'currency' } ,
   { attr: "size" , label: "Size" } ,
 //   { attr: "color" , label: "Color" } ,
-  { view: "decrement" , label: false , text: "- 1" } ,
-  { attr: "quantity" , label: "Qty" } ,
-  { view: "increment" , label: false , text: "+ 1" } ,
-  { attr: "total" , label: "SubTotal", view: 'currency' } ,
-  { view: "remove" , text: "Remove" , label: false }
+  { view: "decrement" , label: false , text: "&#8854;" } ,
+  { attr: "quantity" , label: "#" } ,
+  { view: "increment" , label: false , text: "&#8853;" } ,
+  { attr: "total" , label: "Subtotal", view: 'currency' } ,
+  { view: "remove" , text: "&#9746;	" , label: false }
 ]
 
 });
+
+
 
 //* Refresh cart once simpleCart is ready to listen.
 simpleCart.ready(function() {
