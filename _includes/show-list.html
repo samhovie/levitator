@@ -33,9 +33,20 @@
 
 <div id = 'future-container'>
 
-<div class = 'future'><p class ="event  ">FALL/WINTER SOON</p> <br>
-
-        </div> 
+    {% for show in site.data.shows %}
+    {% capture posttime %}{{show.date | date: '%s'}}{% endcapture %}
+    {% if posttime >= nowunix %}
+<div class = "future"> <p class ="event " >{{ show.venue }}</p> <br>
+            <p class="event ">{{ show.date | date: "%b %d, %Y" }}</p>  <br>
+            <p class="event ">{{ show.time }}</p>  <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+</div>
+            {% endif %}
+    {% endfor %}
 </div>
 </div>
 
