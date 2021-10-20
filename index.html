@@ -7,6 +7,15 @@ layout: none
 <head>
     <meta charset="UTF-8">
     <title>LEVITATOR</title>
+<!-- 
+    <meta http-equiv="Content-Security-Policy"
+      content="script-src 'nonce-xyz123'; style-src 'nonce-xyz123';"> -->
+      <!-- <meta http-equiv="Content-Security-Policy"
+      content="default-src 'self'; img-src https://*; child-src 'none';">
+       -->
+       
+       <!-- <meta http-equiv="Content-Security-Policy"
+      content="script-src 'nonce-xyz123'; style-src 'nonce-xyz123';"> -->
 
     <link rel="stylesheet" href="./normalize.css">
 
@@ -22,7 +31,7 @@ layout: none
 
     
     <script
-    src="https://www.paypal.com/sdk/js?client-id=AblVLVCbzpVwjCmbv5nTaxT_6z3Ot0kBirLZow6rqTxHOZ8BXt3PlEwkHd-Klx0Hzd8VRIJrLv8e304r"> // Required. Replace YOUR_CLIENT_ID with your sandbox client ID.
+    src="https://www.paypal.com/sdk/js?client-id=AblVLVCbzpVwjCmbv5nTaxT_6z3Ot0kBirLZow6rqTxHOZ8BXt3PlEwkHd-Klx0Hzd8VRIJrLv8e304r" data-csp-nonce="xyz-123"> // Required. Replace YOUR_CLIENT_ID with your sandbox client ID.
   </script>
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r126/three.min.js" integrity="sha512-n8IpKWzDnBOcBhRlHirMZOUvEq2bLRMuJGjuVqbzUJwtTsgwOgK5aS0c1JA647XWYfqvXve8k3PtZdzpipFjgg==" crossorigin="anonymous"></script>
@@ -31,7 +40,7 @@ layout: none
     <script type="module" src="OrbitControls.js"></script>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
   </head>
@@ -45,7 +54,6 @@ layout: none
       <div id = "home" class="page page-0">
              <h1 id='home-title'>LEVITATOR</h1>
              <!-- <button class="nav-button" id="top-button"><text class = 'nav-button-text' id = "top-button-text" >MERCH</text></button> -->
-             <!-- update2  -->
       <button class="nav-button" id="left-button"><text class = 'nav-button-text' id = "left-button-text" >SHOWS</text></button>
       <button class="nav-button" id="bottom-button"><text class = 'nav-button-text' id = "bottom-button-text" >INQUIRIES</text></button>
       <button class="nav-button" id="right-button"><text class = 'nav-button-text' id = "right-button-text" >PRESS</text></button>
@@ -154,15 +162,44 @@ layout: none
                   </div>
                   <!-- <a id ='checkout' type="button" class="btn btn-dark w-100"  >Checkout</a> -->
                   <br>
-                  <div class="d-flex justify-content-center" id="paypal-button-container"></div>
+                  <!-- <div class="d-flex justify-content-center" id="paypal-button-container"></div> -->
+                  <div class="d-flex justify-content-center" id="process-cart">
+                    <button id="checkout-button" type="button" class="btn btn-secondary">CHECKOUT</button>
+
+                  </div>
                 </div>
 
             </div>    
-                <!-- <button type="button" class="btn btn-dark">Checkout</button> -->
-
+       
                 
             
               </div>
+
+
+
+            <div id="checkout-process"  class="fourty hide"  >
+
+       
+                
+                <div id="checkout-process-inner" class=" fourty simplecart-cart">
+
+                   
+                    <div class="d-flex justify-content-center" id="paypal-button-container"></div>
+
+            </div>  
+            </div>
+
+            <div id="checkout-success"  class="fourty hide"  >
+
+       
+                
+                <div id="checkout-success-inner" class=" fourty simplecart-cart">
+
+                   
+                      
+
+            </div>  
+            </div>
 
                 <div class ='header' >
 
@@ -281,81 +318,18 @@ layout: none
             let outDirection = "";
             let inDirection = "";
 
-            // if home is hidden 
-            // if (document.querySelector('#home').classList.contains('o0')) { // better way to do this? 
-                // buttonId is outSlide
-                // outSlide = '#' + (button.id).split('-')[0]; 
-                // home is inslide
-                // inSlide = '#home';
-                // hide button
-                // $('#' + buttonId + "-text").hide()
-                // $('#' + buttonId + "-text").text(saveText);
-                // saveText = "HOME";
-                // show all buttons with correct names in place 
-                // for (const button of buttons) { 
-                //     $('#' + (button.id) + "-text").fadeIn()
-                // }
+          
 
-                // if (buttonId.localeCompare('right-button') === 0) {
-                //     $('#' + buttonId).css({ top: '50%' });
-                // } 
-                // else if (buttonId.localeCompare('left-button') === 0) {
-                //     $('#' + buttonId).css({ marginTop: '-82px' });
-                // }
-                // else if (buttonId.localeCompare('top-button') === 0) {
-                //     // $('#' + buttonId).css({ top: '11%' });
-                //     $('#' + buttonId).css({ marginLeft: '-80px' });
-                // }
-                // else if (buttonId.localeCompare('bottom-button') === 0) {
-                //     // $('#' + buttonId).css({ top: '11%' });
-                //     $('#' + buttonId).css({ marginLeft: '-98px' });
-
-                // }
-
-
-            // if button page is hidden
-            // } else if (document.querySelector('#' + (button.id).split('-')[0]).classList.contains('o0')) {
-                // buttonId is inslide
                 inSlide = '#' + (button.id).split('-')[0];
-                // butttonid is outslide
                 outSlide = '#home'
 
                 // hide all buttons 
                 for (const button of buttons) { 
                     $('#' + (button.id) ).prop("disabled",true);
                 }
-                // show home button in place
-                // let buttonText = $('#' + buttonId + "-text")
-                // saveText = buttonText.text();
-                // buttonText.text("HOME");
 
 
 
-                // buttonText.fadeIn("slow");
-
-
-                // if (buttonId.localeCompare('right-button') === 0) {
-                //     $('#' + buttonId).css({ top: '11%' });
-                // } 
-                // else if (buttonId.localeCompare('left-button') === 0) {
-                //     // $('#' + buttonId).css({ top: '11%' });
-                //     $('#' + buttonId).css({ marginTop: '-69px' });
-                // }
-                // else if (buttonId.localeCompare('top-button') === 0) {
-                //     // $('#' + buttonId).css({ top: '11%' });
-                //     $('#' + buttonId).css({ marginLeft: '-68px' });
-                // }
-                // else if (buttonId.localeCompare('bottom-button') === 0) {
-                //     // $('#' + buttonId).css({ top: '11%' });
-                //     $('#' + buttonId).css({ marginLeft: '-58px' });
-
-                // }
-
-            // }
-            // else {
-            //     console.log('error:', '#' + (button.id).split('-')[0] );
-            // }
-            //directions
             directions = getDirections(inSlide, outSlide);
             inDirection = directions[0]
             outDirection = directions[1]
@@ -363,6 +337,84 @@ layout: none
     });
   }
     
+
+
+
+//   let total = 0;
+$("#add-button").click(function(){ 
+
+    animateCSS('#cart', 'tada')
+
+})
+
+$("#checkout-button").click(function(){ 
+
+// animateCSS('#cart', 'tada')
+
+// close cart 
+// console.log('done')
+animateCSS("#checkout-cart", "fadeOutLeft",  function () {
+            const node = document.querySelector("#checkout-cart");
+            node.classList.add('hide');
+
+
+        });
+
+// get order details 
+
+// render buttons
+
+
+
+paypal.Buttons({
+
+// Set up the transaction
+createOrder: function(data, actions) {
+    return actions.order.create({
+        purchase_units: [{
+            amount: {
+                value: '88.44'
+            }
+        }]
+    });
+},
+
+// Finalize the transaction
+onApprove: function(data, actions) {
+    return actions.order.capture().then(function(orderData) {
+        // Successful capture! For demo purposes:
+        console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+        // var transaction = orderData.purchase_units[0].payments.captures[0];
+        // alert('Transaction '+ transaction.status + ': ' + transaction.id + '\n\nSee console for all available details');
+
+        // Replace the above to show a success message within this page, e.g.
+        // const element = document.getElementById('paypal-button-container');
+        // element.innerHTML = '';
+        // element.innerHTML = '<h3>Thank you for your payment!</h3>';
+        // Or go to another URL:  actions.redirect('thank_you.html');
+    });
+}
+
+
+}).render('#paypal-button-container');
+
+
+
+
+        const node2 = document.querySelector("#checkout-process");
+        node2.classList.remove('hide');
+        animateCSS("#checkout-process", "fadeInRight");
+
+
+// finalize cart 
+
+// render buttons 
+
+// show checkout card
+
+})
+
+
 </script>
 
 <script>
@@ -406,53 +458,31 @@ $("#past_button").on('click', function() {
 
     });
 
-    $("#close-button").on('click', function() {
-        $("#checkout-cart").hide();
-     })
-
-    //  $("#checkout").on('click', function() {
-    //      console.log('check')
-    //     $("#checkout-cart").show();
+    // $("#close-button").on('click', function() {
+    //     $("#checkout-cart").hide();
     //  })
-//     $( "#checkout" ).click(function() {
-//         $("#checkout-cart").show();
+
+
+// $(document).on("click", "#view-button", function() {
+//     $("#checkout-cart").show();
+//     // $("#cart").popover('hide')
+
 // });
-$(document).on("click", "#checkout", function() {
-    // alert('it works!');
-    $("#checkout-cart").show();
-    $("#cart").popover('hide')
 
-});
-
-$("#cart").on('click', function() {
-
-// $("#cart").popover('show');
+// $("#cart").on('click', function() {
 
 
-if($("#checkout-cart").is(":visible")) {
-    $("#checkout-cart").hide();
-} else {
-    $("#cart").popover('show');
-}
 
-})
+// if($("#checkout-cart").is(":visible")) {
+//     $("#checkout-cart").hide();
+// } else {
+//     // $("#cart").popover('show');
+//     $("#checkout-cart").show();
+// }
 
-    // for all home buttons, 
-        // get id
-
-    // $("#home-button").on('click', function() {  
-    //     const inSlide = '#home'
-    //     // let outSlide = 
-    //     // transitionSlides(outSlide, outDirection, inSlide, inDirection);
-    //     transitionSlides('#top', 'slideOutUp', '#home', 'slideInUp')
-    //     // #left slideOutLeft #home slideInRight
-    // '#top', 'slideOutUp', '#home', 'slideInUp')
-    
+// })
 
 
-        
-
-    // });
 
 
     const homebuttons = document.getElementsByClassName("home-button");
@@ -580,18 +610,7 @@ $(function () {
   $('[data-toggle="tooltip"]').tooltip({trigger: 'manual', placement: 'bottom'})
 })
 
-$("#add-button").click(function(){ 
 
-    $("#cart").popover('show')
-
-    setTimeout(function() {
-    
-        $("#cart").popover('hide')
-
-
-    }, 5000);
-
-})
 
 //     // console.log('alser')
 //     // $("#size-select").
@@ -622,16 +641,16 @@ $("#add-button").click(function(){
 
 // });
 
-var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
-var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
-  return new bootstrap.Popover(popoverTriggerEl, { 
-    html : true,
-    trigger: 'manual',
-    content: function() {
-      return $('#popover_content_wrapper').html();
-    }
-  } )
-})
+// var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+// var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+//   return new bootstrap.Popover(popoverTriggerEl, { 
+//     html : true,
+//     trigger: 'manual',
+//     content: function() {
+//       return $('#popover_content_wrapper').html();
+//     }
+//   } )
+// })
 
 
 // $(document).ready(function(){
@@ -669,26 +688,26 @@ var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
 
 // document.getElementById("grand-total").value = "25";
 
-let total = 0;
-simpleCart.ready(function(){
-simpleCart.empty();
-total = simpleCart.grandTotal();
-});
+// let total = 0;
+// simpleCart.ready(function(){
+// simpleCart.empty();
+// // total = simpleCart.grandTotal();
+// });
+
+// console.log(total)
 
 
-
-
-    paypal.Buttons({
-      createOrder: function(data, actions) {
-        // This function sets up the details of the transaction, including the amount and line item details.
-        return actions.order.create({
-          purchase_units: [{
-            amount: {
-              value: total
-            }
-          }]
-        });
-      }
-    }).render('#paypal-button-container');
+    // paypal.Buttons({
+    //   createOrder: function(data, actions) {
+    //     // This function sets up the details of the transaction, including the amount and line item details.
+    //     return actions.order.create({
+    //       purchase_units: [{
+    //         amount: {
+    //           value: 20
+    //         }
+    //       }]
+    //     });
+    //   }
+    // }).render('#paypal-button-container');
 
   </script>
