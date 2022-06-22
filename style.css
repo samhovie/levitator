@@ -463,6 +463,7 @@ table {
     left: 50%;
     margin-left: -80px;
     top: 0%;
+    color: black;
     width: fit-content;
     transform: rotate(180deg);
     padding-bottom: 40px;
@@ -471,6 +472,7 @@ table {
   #bottom-button {
     border: none;
     position: absolute;
+    color: black;
     bottom: 0px;
     margin-left: -98px;
     left: 50%;
@@ -483,6 +485,7 @@ table {
     position: absolute;
     top: 50%;
     left: 0px;
+    color: black;
     margin-top: -82px;
     transform: rotate(90deg);
   }
@@ -494,6 +497,7 @@ table {
     right: 0px;
     margin-top: -68px;
     transform: rotate(-90deg);
+    color: black;
   }
 
 .containerz {
