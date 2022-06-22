@@ -19,6 +19,10 @@ html {
     opacity: 0 !important;
 }
 
+.hide {
+    display: none !important;
+}
+
 @font-face {
     font-family: 'KC Lazy Daisy';
     src: url('css/fonts/KCLazyDaisyRegular.eot');
@@ -138,6 +142,14 @@ button {
       margin-right: auto;
 
   }
+  #process-cart {
+    /* margin-top: 50px; */
+    min-width: 700px;
+    /* width: fit-content; */
+    margin-left: auto;
+    margin-right: auto;
+
+}
 
   /* .paypal-buttons {
       /* max-width: 900px !important; */
@@ -183,13 +195,15 @@ button {
      
 
   #checkout-cart {
-      display: none;
+      /* display: none; */
       /* padding: 100px; */
       position: absolute;
       z-index: 4;
-      width: 90%;
+      width: 85%;
       height: fit-content;
-      top: 15%;
+      min-height: 600px;
+
+      top: 18%;
       margin-left: auto;
       margin-right: auto;
       left: 0;
@@ -202,11 +216,46 @@ right: 0;
        border-radius: 5px;
   }
 
-  #checkout-cart-inner {
+  #checkout-process {
+    /* display: none; */
+    /* padding: 100px; */
+    position: absolute;
+    z-index: 4;
+    width: 85%;
+    height: fit-content;
+    min-height: 600px;
+
+    top: 18%;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+right: 0;
+    /* margin-bottom: 20%; */
+    /* background-color: darkgrey;
+     */
+     background-color: #979797;
+     /* border: 1px solid black; */
+     border-radius: 5px;
+}
+
+#checkout-cart-inner{
 
     width: 725px;
     /* padding: 20px; */
     margin: 30px auto 150px;
+    height: fit-content;
+    /* margin-right: auto; */
+    /* margin-left: auto; */
+    
+
+  }
+
+#checkout-process-inner {
+
+    width: 725px;
+    /* padding: 20px; */
+    margin: 30px auto 150px;
+    height: fit-content;
     /* margin-right: auto; */
     /* margin-left: auto; */
     
