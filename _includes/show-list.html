@@ -5,21 +5,10 @@
     <br>
 
 <div id = 'past-container'>
-{% capture nowunix %}{{'now' | date: '%s'}}{% endcapture %}
+<!-- {% capture nowunix %}{{'now' | date: '%s'}}{% endcapture %} -->
 <!-- past shows MAKE GREY -->
-{% for show in site.data.shows %}
-    {% capture posttime %}{{show.date | date: '%s'}}{% endcapture %}
-    {% if posttime < nowunix %}
-<div class = "past"> <p class ="event " >{{ show.venue }}</p> <br>
-            <p class="event ">{{ show.date | date: "%b %d, %Y" }}</p>  <br>
-            <p class="event ">{{ show.time }}</p>  <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-</div>
-            {% endif %}
+    <!-- {% capture posttime %}{{show.date | date: '%s'}}{% endcapture %} -->
+
 
 <!-- {% if posttime = nowunix %}
 <div class = "past"> <p class ="event " >{{ show.venue }}</p> <br>
@@ -33,7 +22,6 @@
 </div>
             {% endif %} -->
 
-    {% endfor %}
 </div>
 
 
@@ -47,8 +35,8 @@
 <div id = 'future-container'>
 
     {% for show in site.data.shows %}
-    {% capture posttime %}{{show.date | date: '%s'}}{% endcapture %}
-    {% if posttime >= nowunix %}
+    <!-- {% capture posttime %}{{show.date | date: '%s'}}{% endcapture %} -->
+    <!-- {% if posttime >= nowunix %} -->
 <div class = "future"> <p class ="event " >{{ show.venue }}</p> <br>
             <p class="event ">{{ show.date | date: "%b %d, %Y" }}</p>  <br>
             <p class="event ">{{ show.time }}</p>  <br>
@@ -58,7 +46,7 @@
             <br>
             <br>
 </div>
-            {% endif %}
+            <!-- {% endif %} -->
     {% endfor %}
 </div>
 </div>
