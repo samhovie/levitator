@@ -27,7 +27,8 @@ layout: none
             <!-- <p>{{ show.time }}</p> -->
             {% endfor %}
 
-            <div style="height: 100px"></div>
+            <div id="page-bottom" style="height: 100px"></div>
+
         </div>
         <script>
             // document.querySelector("#down-button").onclick = function (e) {
@@ -37,11 +38,14 @@ layout: none
 
             // var bt1;
             document.addEventListener("DOMContentLoaded", load);
+            // document.addEventListenerb
             function load() {
                 document.querySelector("#down-button").onclick = function (e) {
-                e.preventDefault();
+                // e.preventDefault();
+                let pageBottom = document.querySelector("#page-bottom")
                 // alert('test')
-                window.scrollTo(0, 1372);
+                // window.scrollTo(0, 1300);
+                pageBottom.scrollIntoView()
                 // console.log(document.body.scrollHeight)
             };
             }
