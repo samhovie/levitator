@@ -10,7 +10,7 @@ layout: none
             <h1 id="home-title">LEVITATOR</h1>
 
             <div class="bottom-container">
-                <i id="" class="fa-solid fa-chevron-down"></i>
+                <i id="down-button" class="fa-solid fa-chevron-down"></i>
             </div>
         </div>
 
@@ -28,8 +28,12 @@ layout: none
             <div style="height: 100px;"></div>
 
         </div>
+        <script>
+            document.querySelector('#down-button').onclick = function(e) {  window.scrollTo(0, document.body.scrollHeight); };
+        </script>
     </body>
 </html>
+
 
 <!-- <div class="containerz"> -->
 
