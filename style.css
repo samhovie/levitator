@@ -121,6 +121,9 @@ body {
     color:rgb(250 250 250);
     margin-top: 60px;
 }
+button {
+  all: unset;
+}
 
 button {
     background: none;
@@ -130,9 +133,7 @@ button {
     font-size: 40px;
     padding: 10px;
 }
-button {
-  all: unset;
-}
+
 @media screen and (max-width: 830px) {
   #home-title {
     margin-top: 80px;
