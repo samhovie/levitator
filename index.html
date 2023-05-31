@@ -28,27 +28,38 @@ layout: none
             {% endfor %}
 
             <div id="page-bottom" style="height: 100px"></div>
-
         </div>
         <script>
-            // document.querySelector("#down-button").onclick = function (e) {
-            //     e.preventDefault();
-            //     window.scrollTo(0, document.body.scrollHeight);
-            // };
+            const scrollElementIntoView = (element, behavior) => {
+                let scrollTop = window.pageYOffset || element.scrollTop;
+
+
+                const finalOffset = element.getBoundingClientRect().top + scrollTop
+
+                window.parent.scrollTo({
+                    top: finalOffset,
+                    behavior: behavior || "auto",
+                });
+            };
+
+            document.querySelector("#down-button").onclick = function (e) {
+                e.preventDefault();
+                scrollElementIntoView(document.querySelector("#page-bottom"))
+            };
 
             // var bt1;
-            document.addEventListener("DOMContentLoaded", load);
-            // document.addEventListenerb
-            function load() {
-                document.querySelector("#down-button").onclick = function (e) {
-                // e.preventDefault();
-                let pageBottom = document.querySelector("#page-bottom")
-                // alert('test')
-                // window.scrollTo(0, 1300);
-                pageBottom.scrollIntoView()
-                // console.log(document.body.scrollHeight)
-            };
-            }
+            // document.addEventListener("DOMContentLoaded", load);
+            // // document.addEventListenerb
+            // function load() {
+            //     document.querySelector("#down-button").onclick = function (e) {
+            //     // e.preventDefault();
+            //     let pageBottom = document.querySelector("#page-bottom")
+            //     // alert('test')
+            //     // window.scrollTo(0, 1300);
+            //     pageBottom.scrollIntoView()
+            //     // console.log(document.body.scrollHeight)
+            // };
+            // }
 
             // function clicked() {
             //     const div = document.createElement("div");
