@@ -5,36 +5,38 @@ layout: none
 <!DOCTYPE html>
 <html>
     {% include head.html %}
-  <body>
-    <div class="header-container">
-        <h1 id='home-title'>LEVITATOR</h1>
+    <body class="parent">
+        <div class="header-container section">
+            <h1 id="home-title">LEVITATOR</h1>
 
-        <div class="bottom-container"></div>
-    </div>
+            <div class="bottom-container">
+                <i id="" class="fa-solid fa-chevron-down"></i>
+            </div>
+        </div>
 
-    <div class="shows-container">
-        <!-- <h1 id='shows-title'>SHOWS</h1> -->
+        <div class="shows-container flex-col center section">
+            <h2 id="shows-title">SHOWS</h2>
 
-        <!-- <img alt="band-image" src="https://livebnbbucket.s3.amazonaws.com/Levitator20.jpg"></img> -->
+            {% for show in site.data.shows %}
+                <p>{{ show.venue }}</p>
 
-    </div>
+                <p>{{ show.date | date: "%b %d, %Y" }}</p>
 
+                <!-- <p>{{ show.time }}</p> -->
+            {% endfor %}
 
+            <div style="height: 100px;"></div>
 
-  </body>
+        </div>
+    </body>
 </html>
 
+<!-- <div class="containerz"> -->
 
-  <!-- <div class="containerz"> -->
-
-      <!-- <div id = "home" class="page page-0"> -->
-
-
-      <!-- </div> -->
-
+<!-- <div id = "home" class="page page-0"> -->
 
 <!-- </div> -->
 
-
+<!-- </div> -->
 
 <!-- <script type="module" src="./script.js"></script> -->
