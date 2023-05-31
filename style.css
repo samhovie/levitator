@@ -130,8 +130,13 @@ button {
     cursor: pointer;
     position: absolute;
     z-index: 3;
-    font-size: 40px;
+    font-size: 32px;
     padding: 10px;
+    font-family: 'Monomaniac One', sans-serif;
+
+}
+button > i {
+  padding-left: 8px;
 }
 
 @media screen and (max-width: 830px) {
