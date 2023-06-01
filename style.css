@@ -19,10 +19,10 @@ body {
   scroll-snap-type: y mandatory;
 
 }
-.section {
+/* .section {
   scroll-snap-align: start;
 }
-
+ */
 
 
 .flex {
@@ -78,18 +78,46 @@ body {
     background-color: #000000;
     color: rgb(245, 245, 245);
     overflow: scroll;
+    /* padding-bottom: 100px; */
 }
 
 .shows-container > p {
   font-size: 18px;
   font-family: 'Roboto Mono', monospace;
 
+
 }
+.social-container {
+  /* border: 1px solid red; */
+  width: 100vw;
+  height: 150px;
+}
+.icon {
+  width: 42px;
+  height: 42px;
+  margin: 0px 20px
+}
+
+
+.spotify-green {
+  color: #1DB954;
+  font-size: 42px;
+}
+
+
+
 
 .center-column {
   height: 100%;
   /* border: 1px solid blue; */
   width: 500px;
+}
+
+.media-container {
+  border: 1px solid red;
+  width: 100vw;
+  height: 100vh;
+
 }
 
 @font-face {
