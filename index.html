@@ -20,53 +20,16 @@ layout: none
             <h2 id="shows-title">SHOWS</h2>
 
             {% for show in site.data.shows %}
-            <p>{{ show.venue }}</p>
+            <p style="font-weight: bolder">{{ show.venue }}</p>
+            <p>
+                {% if show.end %} Jul 7 - Jul 9, 2023 {% else %} {{ show.date |
+                date: "%b %-d, %Y" }} {% endif %}
+            </p>
 
-            <p>{{ show.date | date: "%b %d, %Y" }}</p>
-
-            <!-- <p>{{ show.time }}</p> -->
             {% endfor %}
 
             <div id="page-bottom" class="check" style="height: 100px"></div>
         </div>
-        <script>
-            const scrollElementIntoView = (element, behavior) => {
-                let scrollTop = window.pageYOffset || element.scrollTop;
-
-
-                const finalOffset = element.getBoundingClientRect().top + scrollTop
-
-                window.parent.scrollTo({
-                    top: finalOffset,
-                    behavior: behavior || "auto",
-                });
-            };
-
-            document.querySelector("#down-button").onclick = function (e) {
-                e.preventDefault();
-                scrollElementIntoView(document.querySelector("#page-bottom"))
-            };
-
-            // var bt1;
-            // document.addEventListener("DOMContentLoaded", load);
-            // // document.addEventListenerb
-            // function load() {
-            //     document.querySelector("#down-button").onclick = function (e) {
-            //     // e.preventDefault();
-            //     let pageBottom = document.querySelector("#page-bottom")
-            //     // alert('test')
-            //     // window.scrollTo(0, 1300);
-            //     pageBottom.scrollIntoView()
-            //     // console.log(document.body.scrollHeight)
-            // };
-            // }
-
-            // function clicked() {
-            //     const div = document.createElement("div");
-            //     div.textContent = "welcome";
-            //     document.body.appendChild(div);
-            // }
-        </script>
     </body>
 </html>
 
