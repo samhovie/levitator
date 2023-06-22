@@ -25,6 +25,9 @@ layout: none
                 {% if show.end %} Jul 7 - Jul 9, 2023 {% else %} {{ show.date |
                 date: "%b %-d, %Y" }} {% endif %}
             </p>
+            <p>
+                {{ show.time }}
+            </p>
 
             {% endfor %}
 
