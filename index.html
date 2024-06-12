@@ -19,13 +19,11 @@ layout: none
 
         <div class="grid">
             {% for image in site.data.images %}
-            <a
-                href="https://livebnbbucket.s3.amazonaws.com/BandPhotos/{{ image.src }}"
-                ><img
-                    class="grid-item"
+                <img
+                    class="grid-item {{ image.src | split: '-' | first }}  "
                     src="https://livebnbbucket.s3.amazonaws.com/BandPhotos/{{ image.src }}"
                     alt="{{ image.src }}"
-            /></a>
+            />
             {% endfor %}
         </div>
 
