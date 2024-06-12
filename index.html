@@ -5,7 +5,8 @@ layout: none
 <!DOCTYPE html>
 <html>
     {% include head.html %}
-    <body class="parent">
+    <body class="">
+
         <div class="header-container section">
             <h1 id="home-title">LEVITATOR</h1>
 
@@ -16,8 +17,20 @@ layout: none
             </div>
         </div>
 
+        <div class="grid">
+            {% for image in site.data.images %}
+            <a
+                href="https://livebnbbucket.s3.amazonaws.com/BandPhotos/{{ image.src }}"
+                ><img
+                    class="grid-item"
+                    src="https://livebnbbucket.s3.amazonaws.com/BandPhotos/{{ image.src }}"
+                    alt="{{ image.src }}"
+            /></a>
+            {% endfor %}
+        </div>
+
         <div class="shows-container flex-col center section">
-            <h2 id="shows-title">SHOWS</h2>
+            <h2 id="shows-title">TOUR 2024</h2>
 
             {% for show in site.data.shows %}
             <p style="font-weight: bolder">{{ show.venue }}</p>
@@ -25,63 +38,68 @@ layout: none
                 {% if show.end %} Jul 7 - Jul 9, 2023 {% else %} {{ show.date |
                 date: "%b %-d, %Y" }} {% endif %}
             </p>
-            <p>
-                {{ show.time }}
-            </p>
+            <p>{{ show.time }}</p>
 
             {% endfor %}
 
-            <div class="social-container flex center ">
-                <a href="https://open.spotify.com/artist/0N6EGYcAXOAcdL40o83C2D" target="_blank">
-                <i class="fa-brands fa-spotify spotify-green icon"></i>
+            <div class="social-container flex center">
+                <a
+                    href="https://open.spotify.com/artist/0N6EGYcAXOAcdL40o83C2D"
+                    target="_blank"
+                >
+                    <i class="fa-brands fa-spotify spotify-green icon"></i>
                 </a>
-                <a href="https://music.apple.com/us/artist/levitator/1676960350" target="_blank">
-                    <img class="icon" src="https://livebnbbucket.s3.amazonaws.com/apple_music.png">
+                <a
+                    href="https://music.apple.com/us/artist/levitator/1676960350"
+                    target="_blank"
+                >
+                    <img
+                        class="icon"
+                        src="https://livebnbbucket.s3.amazonaws.com/apple_music.png"
+                    />
                 </a>
 
-                <a href="https://www.instagram.com/levitatorband/" target="_blank">
-                    <img class="icon" src="https://livebnbbucket.s3.amazonaws.com/Instagram_icon.png"></img>
+                <a
+                    href="https://www.instagram.com/levitatorband/"
+                    target="_blank"
+                >
+                    <img
+                        class="icon"
+                        src="https://livebnbbucket.s3.amazonaws.com/Instagram_icon.png"
+                    />
                 </a>
 
                 <a href="https://www.facebook.com/Levitator/" target="_blank">
-                    <img class="icon" src="https://livebnbbucket.s3.amazonaws.com/facebook_icon.png"></img>
+                    <img
+                        class="icon"
+                        src="https://livebnbbucket.s3.amazonaws.com/facebook_icon.png"
+                    />
                 </a>
 
-                <a href="https://www.youtube.com/@Levitatorbandofficial" target="_blank">
-                    <img class="icon" src="https://livebnbbucket.s3.amazonaws.com/youtube-icon.png"></img>
+                <a
+                    href="https://www.youtube.com/@Levitatorbandofficial"
+                    target="_blank"
+                >
+                    <img
+                        class="icon"
+                        src="https://livebnbbucket.s3.amazonaws.com/youtube-icon.png"
+                    />
                 </a>
-
-
             </div>
 
-            <a href="mailto:Blackcatmngmt@gmail.com?subject=Booking Inquiry" style="text-decoration: none; color: inherit;">
+            <a
+                href="mailto:Blackcatmngmt@gmail.com?subject=Booking Inquiry"
+                style="text-decoration: none; color: inherit"
+            >
                 <!-- <span style="font-weight: bold;">BLACK CAT MANAGEMENT</span> -->
-                <img id="blackcat" src="https://livebnbbucket.s3.amazonaws.com/blackcat.png">
+                <img
+                    id="blackcat"
+                    src="https://livebnbbucket.s3.amazonaws.com/blackcat.png"
+                />
             </a>
 
-
-            <br>
-            <br>
-
+            <br />
+            <br />
         </div>
-<!--
-         <div class ="media-container section">
-
-
-
-
-        </div>  -->
-
-
     </body>
 </html>
-
-<!-- <div class="containerz"> -->
-
-<!-- <div id = "home" class="page page-0"> -->
-
-<!-- </div> -->
-
-<!-- </div> -->
-
-<!-- <script type="module" src="./script.js"></script> -->
