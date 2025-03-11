@@ -1,4 +1,4 @@
----
+e---
 # - venue: 'Flamingo Vintage - Detroit'
 #   date: '2023-6-2'
 # - venue: 'Loco Locals - Emmet Fairgrounds'
@@ -89,6 +89,8 @@
   date: '2025-8-29'
 - venue: 'Water is Life Festival - Petoskey, MI'
   date: '2025-8-30'
-- 'Falcon Bowl - Milwaukee, WI'
+- venue: 'Falcon Bowl - Milwaukee, WI'
   date: '2025-9-4'
+- venue: 'Beards Brewery Halloween Party'
+  date: '2025-10-30'
 
