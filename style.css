@@ -11,13 +11,10 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
   width: 100vw;
-  /* background-color: #000000; */
-  background-color: beige;
-  scroll-snap-type: mandatory;
-  scroll-snap-points-y: repeat(100vh);
-  scroll-snap-type: y mandatory;
+  background-color: rgb(0, 0, 0);
 }
 
 
@@ -33,6 +30,18 @@ body {
 .center {
   justify-content: center;
   align-items: center;
+}
+
+.footer-container {
+  margin: 100px 0px 70px;
+}
+
+.social-container {
+  width: 100vw;
+}
+
+.booking-link {
+  padding-top: 20px;
 }
 
 #shows-title {
@@ -79,7 +88,7 @@ body {
     background-color: #000000;
     color: rgb(245, 245, 245);
     overflow: scroll;
-    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 .shows-container > p {
@@ -88,11 +97,7 @@ body {
 text-align: center;
 
 }
-.social-container {
-  /* border: 1px solid red; */
-  width: 100vw;
-  height: 150px;
-}
+
 .icon {
   width: 42px;
   height: 42px;
