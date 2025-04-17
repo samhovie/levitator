@@ -5,16 +5,95 @@
     padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body {
   color: rgb(245, 245, 245);
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  padding-bottom: 60px;
   min-height: 100vh;
   height: auto;
   width: 100vw;
   background-color: rgb(0, 0, 0);
+  overflow-x: hidden;
+}
+
+.sticky-menu {
+  position: fixed;
+  width: 100vw;
+  height: 170px;
+  top: 0;
+  z-index: 1000;
+  padding: 10px 0px;
+  display: flex;
+  flex-wrap: wrap;
+  font-family: 'KC Stone Cold Fox';
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#main-icon {
+  max-height: 100px;
+  width: auto;
+  margin-top: 28px;
+  padding-right: 10px;
+}
+
+.sticky-menu ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  /* margin-top: 20px;
+  margin-left: 20px; */
+}
+
+.sticky-menu a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+/* #shows-button, #gallery-button {
+  padding-top: 15px;
+  padding-right: 10px;
+
+} */
+
+.sticky-menu li {
+  padding-top: 15px;
+  padding-right: 10px;
+
+}
+
+#home-title {
+  z-index: 3;
+  font-family: "KC Lazy Daisy";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 140px;
+  color:rgb(250 250 250);
+  margin-top: 0px;
+  padding-right: 10px;
+  /* height: 125px; */
+}
+
+.header-container {
+  position: relative;
+  /* top: 0; */
+  /* padding-top: 100px; */
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,.8) 100%),
+  url("https://livebnbbucket.s3.amazonaws.com/BandPhotos/Levitator20-min.jpg");
+
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  z-index: 1;
 }
 
 
@@ -52,39 +131,10 @@ body {
   font-size: 48px;
 }
 
-.header-container {
-  width: 100vw;
-  height: 100vh;
-  background-image: url("https://livebnbbucket.s3.amazonaws.com/BandPhotos/Levitator20-min.jpg");
-  background-repeat: no-repeat;
-  background-size: 100%;
-  background-position: center;
-
-}
-
-
-
-
-
-.bottom-container {
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
-  /* height: fit-content; */
-  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,.8) 100%);
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-}
-
-.bottom-container > i {
-  padding: 40px;
-  font-size: 32px;
-}
 
 .shows-container {
     width: 100vw;
-    height: fit-content;
+    min-height: 100vh;
     background-color: #000000;
     color: rgb(245, 245, 245);
     overflow: scroll;
@@ -140,20 +190,19 @@ text-align: center;
     color: #000000;
 }
 
-#home-title {
-    /* z-index: 3; */
-    font-family: "KC Lazy Daisy";
-    font-weight: normal;
-    font-style: normal;
-    font-size: 100px;
-    position: absolute;
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    color:rgb(250 250 250);
-    margin-top: 60px;
+@font-face {
+  font-family: 'KC Stone Cold Fox';
+  src: url('css/fonts/KCStoneColdFoxRegular.woff2') format('woff2'),
+      url('css/fonts/KCStoneColdFoxRegular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
 }
+
+
+
+
+
 button {
   all: unset;
 }
@@ -177,28 +226,45 @@ button > i {
 }
 
 @media screen and (max-width: 830px) {
-  #home-title {
-    margin-top: 80px;
-    font-size: 42px;
+  #main-icon {
+    max-height: 50px;
+    width: auto;
+    margin: 0px;
+    margin-left: 8px;
+    margin-right: 12px;
+    padding-right: 0px;
+    margin-top: 5px;
   }
-
+  #home-title {
+    font-size: 54px;
+    margin-left: 10px;
+    margin-bottom: 2px;
+  }
+  .sticky-menu {
+    padding-left: 0;
+    height: 110px;
+  }
+  .sticky-menu li {
+    padding-top: 0px;
+    margin-top: 0px;
+  }
+  #shows {
+    padding-top: 60px;
+    padding-bottom: 100px;
+  }
+  #gallery {
+    padding-top: 115px;
+  }
   .header-container {
-    background-image: url("https://livebnbbucket.s3.amazonaws.com/BandPhotos/Levitator20-min.jpg");
     background-size: cover;
   }
-
-  .bottom-container > button {
-    padding: 20px;
-    font-size: 24px;
-
-  }
-
-
-#down-button {
-  margin-bottom: 100px;
 }
 
-}
+
+
+
+
+
 
 #blackcat {
   width: 200px;

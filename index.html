@@ -7,23 +7,26 @@ layout: none
     {% include head.html %}
     <body class="">
 
-        <div class="header-container section">
-            <h1 id="home-title">LEVITATOR</h1>
+        <nav class="sticky-menu">
 
-            <div class="bottom-container">
-                <button type="button" id="down-button">
-                    <i class="fa-solid fa-chevron-down"></i>
-                </button>
-            </div>
+            <a href="#top"><img id="main-icon" src="images/products/basic/whitecar.png"></a>
 
+            <a href="#top"><h1 id="home-title">LEVITATOR</h1></a>
+
+            <ul>
+              <li id="shows-button" ><a href="#shows">Shows</a></li>
+              <li id="gallery-button" ><a href="#gallery">Gallery</a></li>
+              <!-- <li id="music-button" ><a href="#gallery">Music</a></li> -->
+            </ul>
+
+          </nav>
+
+        <div id="top" class="header-container section">
 
         </div>
 
 
-
-
-
-        <div class="shows-container flex-col center section">
+        <div id="shows" class="shows-container flex-col center section">
             <h2 id="shows-title">TOUR 2025</h2>
 
             {% for show in site.data.shows %}
@@ -43,7 +46,7 @@ layout: none
 
 
 
-        <div class="grid image-grid">
+        <div id="gallery" class="grid image-grid">
             {% for image in site.data.images %}
                 <img
                     class="grid-item {{ image.src | split: '-' | first }}  "
