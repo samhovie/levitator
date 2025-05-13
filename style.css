@@ -26,7 +26,7 @@ body {
 .sticky-menu {
   position: fixed;
   width: 100vw;
-  height: 170px;
+  height: 160px;
   top: 0;
   z-index: 1000;
   /* padding: 10px 0px; */
@@ -202,6 +202,14 @@ button > i {
 #down-button {
   margin-bottom: 20px;
 }
+  #main-icon-link {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: inherit;
+  }
+
 
 @media screen and (max-width: 830px) {
   #main-icon {
@@ -209,6 +217,9 @@ button > i {
     width: auto;
     margin: 0px;
     padding-left: 12px;
+  }
+  .menu-title-container {
+
   }
   #main-icon-link {
       display: flex;
@@ -344,6 +355,11 @@ button > i {
   .menu-title-container {
     display: flex;
   }
+  #main-icon {
+    padding-left: 12px;
+  }
+
+
 
   .RobGlow {
     width: 17%;
