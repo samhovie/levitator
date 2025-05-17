@@ -33,7 +33,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   font-family: 'KC Stone Cold Fox';
-  background-color: rgba(0, 0, 0, 0.5);
+  /* background-color: rgba(0, 0, 0, 0.5); */
 }
 
 
